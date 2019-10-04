@@ -6,7 +6,6 @@ $sql1 = "SELECT * FROM t_produits";
 $result = $base->prepare($sql1);
 $result->execute();
 $max= $result->rowCount();
-echo "max : ".$max;
 
 $step = 2;
 if (!isset($_SESSION['start']) || isset($_POST['first'])) {
