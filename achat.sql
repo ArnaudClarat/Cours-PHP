@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 30 sep. 2019 à 13:01
+-- Généré le :  ven. 04 oct. 2019 à 08:47
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `t_produits` (
   `descriptif_prod` text NOT NULL,
   `photo_prod` text NOT NULL,
   PRIMARY KEY (`id_prod`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `t_produits`
@@ -51,7 +51,8 @@ INSERT INTO `t_produits` (`id_prod`, `nom_prod`, `pu_prod`, `descriptif_prod`, `
 (6, 'porte savon', '24.99', 'Porte savon aux motifs floraux', 'm_DADPSF_1.jpg'),
 (7, 'Eau de Hongrie', '999.99', 'Eau de vie provenant de Hongrie', 'm_H8203_1.jpg'),
 (8, 'EAu de hongrie plastique', '799.99', 'La même mais dans un bouteille en plastique', 'm_HG253_1.jpg'),
-(9, 'Savon seul', '89.99', 'Beh juste un savon gros', 'm_S5140MV2_1.jpg');
+(9, 'Savon seul', '89.99', 'Beh juste un savon gros', 'm_S5140MV2_1.jpg'),
+(10, 'Mouette', '26684685.25', 'Portait de Mouette americano-Canadienne', 'Gull_portrait_ca_usa.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
