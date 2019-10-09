@@ -13,5 +13,4 @@ $sql = bindParam(id, $id);
 
 $st = $base->query($sql);
 $array = $st->fetchAll(PDO::FETCH_NUM);
-var_dump($array)
-?>
+var_dump($array);

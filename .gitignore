@@ -2,6 +2,7 @@ add_vhost.php
 index.php
 test_sockets.php
 testmysql.php
+info.php
 favicon.ico
 wamplangues/
 wampthemes/

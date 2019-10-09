@@ -34,8 +34,7 @@
 <table>
 <?php while ($row=$stmt->fetch(PDO::FETCH_ASSOC))
     {?>
-    <tr><form name="test" action="paginSelf
-    .php" method="post">
+    <tr><form name="test" action="paginSelf.php" method="post">
     	<td><input type="hidden" name="id" value="<?php echo $row['id_prod']?>"></td>
     	<td><?php echo $row['nom_prod']?></td>
     	<td><?php echo $row['pu_prod']?></td>

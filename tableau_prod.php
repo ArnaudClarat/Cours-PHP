@@ -79,4 +79,3 @@ if($_SESSION['start'] < 8) {
 if($_SESSION['start'] < 6) {
 	echo "<input type='submit' name='last' value='>>'>";	
 }
-?>

@@ -22,5 +22,4 @@ foreach ($array as $row) {
 }
 echo "</table>";
 
-echo "<input type=button onclick=window.location.href='tableau_prod.php'; value='<<'>"
-?>
+echo "<input type=button onclick=window.location.href='tableau_prod.php'; value='<<'>";
