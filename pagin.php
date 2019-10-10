@@ -1,5 +1,6 @@
 <?php
     //Version originale, corrigée
+    // ATTENTION AUX NOMS DE DBS, TABLES, DOSSIERS, ...
     session_start();
     $prodparpage = 2;
     $pdo = new PDO('mysql:host=localhost;dbname=achats','root','');
