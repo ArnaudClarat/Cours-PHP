@@ -20,14 +20,14 @@
     if (isset($_POST['last'])) {
         $_SESSION['nbpage'] = $nbpages;
     }
-    $sql='SELECT * FROM t_produits LIMIT '.$_SESSION['nbpage']*$prodparpage.','.$prodparpage.'';
+    $sql='SELECT * FROM t_produits LIMIT '.$_SESSION['nbpage']*$prodparpage.','.$prodparpage;
     $stmt = $pdo->query($sql);
 ?>
  
 <table>
 <?php while ($row=$stmt->fetch(PDO::FETCH_ASSOC))
     {?>
-    <tr><form name="prod" action="gestion.php" method="post">
+    <form name="prod" action="gestion.php" method="post"><tr>
     	<td><input type="hidden" name="id1" value="<?php echo $row['id_prod']; $_SESSION['id1'] = $row['id_prod']?>"></td>
     	<td><?php echo $row['nom_prod']?></td>
     	<td><?php echo $row['pu_prod']?></td>
@@ -35,7 +35,7 @@
         <td><input type="image" name="delete1" src="boutons/del.png" alt="delete"></td>
         <td><input type="image" name="update1" src="boutons/modify.png" alt="update"></td>
         <td><input type="image" name="zoom1" src="boutons/search.png" alt="search"></td>
-    </form></tr>
+    </tr></form>
 <?php } ?>
 </table>
 <form name="nav" action="paginSelf.php" method="post">
