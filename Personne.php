@@ -34,7 +34,7 @@ abstract class Personne
         echo "attribut ".$name." inexistant";
     }
 
-    abstract function test();
+    abstract function test(); //Fonction abstraite, donc class obligée d'être abstraite
 }
 
 class Femme extends Personne
@@ -44,7 +44,7 @@ class Femme extends Personne
         parent::__construct($nom);
     }
 
-    public function test()
+    public function test() //On est obligé d'override en public pour empecher de buger
     {
         echo "non abstrait";
     }
@@ -57,5 +57,5 @@ class Fille extends Femme
 
 $per1 = new Femme("dada");
 echo $per1->get_nom();
-$per1->prenom="amine"; // Ne marche que si on décommente la fonction __set()
+//$per1->prenom="amine"; Ne marche que si on commente la fonction __set() et les suivantes
 var_dump($per1);
