@@ -4,7 +4,7 @@
     $base = new PDO('mysql:host=localhost; dbname=achat', 'root'	, '');
     $sql1 = 'SELECT * FROM t_produits';
     $result = $base->query($sql1);
-    $max = $result->rowCount();
+        $max = $result->rowCount();
     $step = 2;
 
     if (!isset($_SESSION['start']) || isset($_POST['first'])) {
