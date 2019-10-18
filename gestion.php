@@ -18,8 +18,8 @@
             <?php
             foreach ($prod as $key => $data) { ?>
                 <tr>
-                    <input type="text" name="id" value="<?php echo $data?>">
-                    <input type="image" name="check" src="boutons/refresh.png"
+                    <td><input type="text" name="id" value="<?php echo $data?>"></td>
+                    <td><input type="image" name="check" src="boutons/refresh.png"></td>
                 </tr>
 
             <?php } ?>
