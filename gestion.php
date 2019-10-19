@@ -14,8 +14,8 @@
         
         <table>
         <form name="prodUpdate" action="gestion.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $prod['id_prod'];?>">
             <ul>
-                <input type="hidden" name="id" value="<?php echo $prod['id_prod'];?>">
                 <li><input type="text" name="nom" value="<?php echo $prod['nom_prod']?>"></li>
                 <li><input type="text" name="pu" value="<?php echo $prod['pu_prod']?>"></li>
                 <li><input type="text" name="desc" value="<?php echo $prod['descriptif_prod']?>"></li>
