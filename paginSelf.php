@@ -34,7 +34,7 @@
     <form name="prod" action="gestion.php" method="post"><tr>
     	<td><input type="hidden" name="id" value="<?php echo $row['id_prod'];?>"></td>
     	<td><?php echo $row['nom_prod']?></td>
-    	<td><?php echo $row['pu_prod']?></td>
+    	<td><?php echo $row['pu_prod']?> €</td>
         <td><img alt="product_image" src="photo/<?php echo $row['photo_prod']?>" width='150'/></td>
         <td><input type="image" name="delete" src="boutons/del.png" alt="delete"></td>
         <td><input type="image" name="update" src="boutons/modify.png" alt="update"></td>
@@ -42,14 +42,15 @@
     </tr></form>
 <?php } ?>
 </table>
+
 <form name="nav" action="paginSelf.php" method="post">
     <?php if($_SESSION['nbpage'] > 1) {?>
 	<input type="image" name="first" src="boutons/first.png" alt="first" />
-    <?php } if ($_SESSION['nbpage'] !== 0) {?>
+    <?php } if($_SESSION['nbpage'] !== 0) {?>
 	<input type="image" name="previous" src="boutons/previous.png" alt="previous" />
-    <?php } if ($_SESSION['nbpage'] !== $nbpages) {?>
+    <?php } if($_SESSION['nbpage'] < ($nbpages)) {?>
 	<input type="image" name="next" src="boutons/next.png" alt="next" />
-    <?php } if ($_SESSION['nbpage'] > ($nbpages-1)) {?>
+    <?php } if($_SESSION['nbpage'] < ($nbpages-1)) {?>
 	<input type="image" name="last" src="boutons/last.png" alt="last" />
     <?php } ?>
 </form>

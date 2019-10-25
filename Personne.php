@@ -1,7 +1,6 @@
 <?php
 
-// abstract = impossible d'instancier la classe, utile seulement pour l'héritage
-abstract class Personne
+abstract class Personne // abstract = impossible d'instancier la classe, utile seulement pour l'héritage
 {
    private $nom;
 
