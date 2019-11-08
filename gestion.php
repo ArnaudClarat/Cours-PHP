@@ -3,12 +3,15 @@
 
     $pdo = new PDO('mysql:host=localhost;dbname=achat','root','');
 
-    if(isset($_POST['delete_x'])){
+    if(isset($_POST['delete_x']))
+    {
         var_dump($_POST);
         $test = $pdo->exec('DELETE FROM t_produits WHERE id_prod = ' . $_POST['id']);
-        if ($test){
+        if ($test)
+        {
             echo "Delete validé";
-        } else {
+        } else
+        {
             echo "Delete non effectué";
         }
         ?>
@@ -16,10 +19,17 @@
             <input type="submit" value="Retour page principale">
         </form>
     <?php}
-    if(isset($_POST['update_x'])){
+    elseif(is_string($_POST['update_y']))
+    {
+        echo "update y";
+    }
+    elseif(isset($_POST['update_x']))
+    {
         $result = $pdo->query('SELECT * FROM t_produits WHERE id_prod = '.$_POST['id']);
         $array = $result->fetchAll(PDO::FETCH_ASSOC);
-        $prod = $array[0];?>
+        $prod = $array[0];
+        echo "update";
+        var_dump($prod);?>
         
         <table>
         <form name="prodUpdate" action="gestion.php" method="post">
@@ -35,7 +45,8 @@
         </table>
 
         <?php }
-    elseif (isset($_POST['zoom_x'])){
+    elseif (isset($_POST['zoom_x']))
+    {
         $result = $pdo->query('SELECT * FROM t_produits WHERE id_prod = '.$_POST['id']);
         $array = $result->fetchAll(PDO::FETCH_ASSOC);
         $prod = $array[0];?>
@@ -52,14 +63,17 @@
         </tr></form>
     <?php }
     
-    elseif (isset($_POST['refresh_x'])){
+    elseif (isset($_POST['refresh_x']))
+    {
         echo "refresh";
 	    $sql = 'UPDATE t_produits SET nom_prod = ?, pu_prod = ?, descriptif_prod = ?, photo_prod = ? WHERE id_prod = ?';
 	    $sth = $pdo->prepare($sql);
 	    $test = $sth->execute(array($_POST['nom'], $_POST['pu'], $_POST['desc'], $_POST['photo'], $_POST['id']));
-	    if ($test){
+	    if ($test)
+	    {
 	        echo "Update validé";
-        } else {
+        } else
+        {
 	        echo "Update non effectué";
         }
 	    ?>
@@ -67,3 +81,9 @@
             <input type="submit" value="Retour page principale">
         </form>
     <?php }
+
+    else
+    {
+        echo "erreur";
+        var_dump($_POST);
+    }
