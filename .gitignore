@@ -6,4 +6,15 @@ info.php
 favicon.ico
 wamplangues/
 wampthemes/
-*.sublime-project
+.idea/dataSources.xml
+.idea/deployment.xml
+.idea/dictionaries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/php.xml
+.idea/runConfigurations/
+.idea/sqldialects.xml
+.idea/vcs.xml
+.idea/webServers.xml
+.idea/www.iml
+marc/

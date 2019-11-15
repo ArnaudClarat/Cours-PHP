@@ -22,6 +22,11 @@ class Jeu
         return $this->message;
     }
 
+    public function getStatut()
+    {
+        return $this->statut;
+    }
+
     public function compare($try)
     {
         $this->nbTry++;

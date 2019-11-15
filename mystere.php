@@ -7,7 +7,20 @@
     }
     if (isset($_POST['joue']))
     {
-        echo $_SESSION['jeu']->compare($_POST['nb'].'<br/>');
+        echo $_SESSION['jeu']->compare($_POST['nb'].'<br/>'); ?>
+        <form name="jeu" action="mystere.php" method="post">
+            <input type="submit" name="nouveau" value="nouveau"/>
+        <?php
+        if ($_SESSION['jeu']->getStatut() === "En cours") {?>
+                <label>Entre ton nombre :
+                    <input type="number" name="nb">
+                </label>
+                <input type="submit" name="joue" value="joue"/>
+                <input type="submit" name="reprendre" value="reprendre"/>
+                <input type="submit" name="sauver" value="sauver"/>
+        <?php } ?>
+        </form>
+        <?php
     }
     if (isset($_POST['save']))
     {
@@ -19,12 +32,4 @@
     }
 ?>
 
-<form name="jeu" action="mystere.php" method="post">
-    <label>Entre ton nombre :
-        <input type="number" name="nb">
-    </label>
-    <input type="submit" name="joue" value="joue"/>
-    <input type="submit" name="reprendre" value="reprendre"/>
-    <input type="submit" name="sauver" value="sauver"/>
-</form>
 <div id="message">Début du jeu</div>
