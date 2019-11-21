@@ -3,15 +3,15 @@
 	class Pendu
 	{
 		private $motATrouver;
-		private $affichage;
+		public $affichage;
 		private $nbTry;
 		private $maxTry;
-		private $lettreJouee;
+		public $lettresJouees;
 		
 		public function __construct($pmotATrouver, $pmaxTry)
 		{
 			$this->motATrouver = str_split($pmotATrouver);
-			$this->lettreJouee = array();
+			$this->lettresJouees = array();
 			$this->nbTry = 0;
 			for ($i = 0, $iMax = count($this->motATrouver); $i < $iMax; $i++) {
 				$this->affichage[$i] = '_';
@@ -20,24 +20,23 @@
 		public function verification($pLettre)
 		{
 			$test = false;
-			if (!in_array($pLettre, $this->lettreJouee, true))
+			if (!in_array($pLettre, $this->lettresJouees, true))
 			{
 				for ($i = 0, $iMax = count($this->motATrouver); $i < $iMax; $i++) {
-					if ($this->motATrouver[$i] === $pLettre) {
+					if ($this->motATrouver[$i] == $pLettre) {
 						$this->affichage[$i] = $pLettre;
 						$test = true;
 					}
 				}
-				array_push($this->lettreJouee, $pLettre);
+				$this->lettresJouees[] = $pLettre;
 			}
 			if (!$test)
 			{
 				$this->nbTry++;
 			}
+			if ($this->motATrouver === $this->affichage)
+			{
+			
+			}
 		}
 	}
-	
-	$pendu = new Pendu("isabelle", 8);
-	$pendu->verification("e");
-	$pendu->verification("l");
-	var_dump($pendu);
