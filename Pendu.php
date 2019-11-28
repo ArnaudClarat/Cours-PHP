@@ -1,46 +1,55 @@
 <?php
-	
+	include('DB_access.php');
 	class Pendu
 	{
-		private $motATrouver;
+		public $motATrouver;
 		public $affichage;
 		private $nbTry;
 		private $maxTry;
 		public $lettresJouees;
+		private $pmotATrouver;
+		public $statut;
 		
 		public function __construct($pmaxTry)
 		{
-			$base = new PDO('mysql:host=localhost; dbname=pendu', 'root'	, '');
-			$sql = 'SELECT * FROM mot ORDER BY RAND () LIMIT 1';
-			$pmotATrouver = $base->query($sql);
-			var_dump($pmotATrouver);
-			$this->motATrouver = str_split($pmotATrouver);
-			$this->lettresJouees = array();
+			$db = new DB_access();
+			$this->motATrouver = str_split($db->getRandomWord());
 			$this->nbTry = 0;
+			$this->statut = "En cours";
+			$this->lettresJouees = array();
+			$this->maxTry = $pmaxTry;
 			for ($i = 0, $iMax = count($this->motATrouver); $i < $iMax; $i++) {
 				$this->affichage[$i] = '_';
 			}
 		}
-		public function verification($pLettre)
+		
+		public function verification($lettre)
 		{
+			$message = "La lettre '".$lettre."' n'est pas ou plus dans le mot.<br>";
 			$test = false;
-			if (!in_array($pLettre, $this->lettresJouees, true))
+			if (!in_array($lettre, $this->lettresJouees, true))
 			{
 				for ($i = 0, $iMax = count($this->motATrouver); $i < $iMax; $i++) {
-					if ($this->motATrouver[$i] === $pLettre) {
-						$this->affichage[$i] = $pLettre;
+					if ($this->motATrouver[$i] === $lettre) {
+						$this->affichage[$i] = $lettre;
 						$test = true;
 					}
 				}
-				$this->lettresJouees[] = $pLettre;
+				$this->lettresJouees[] = $lettre;
 			}
 			if (!$test)
 			{
 				$this->nbTry++;
 			}
-			if ($this->motATrouver === $this->affichage)
+		}
+		
+		public function getStatus()
+		{
+			if($this->motATrouver === $this->affichage)
 			{
-				return 'Vous avez gagné!!';
+				$this->statut = 'Gagné';
+			} elseif ($this->nbTry === $this->maxTry){
+				$this->statut = 'Perdu';
 			}
 		}
 	}
