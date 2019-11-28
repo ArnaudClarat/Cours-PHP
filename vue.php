@@ -1,17 +1,16 @@
 <?php
 	include ('Pendu.php');
 	session_start();
+	$msg = '';
 	
 	if (!isset($_SESSION['pendu']))
 	{
-		$_SESSION['pendu'] = new Pendu('ISABELLE', 8);
+		$_SESSION['pendu'] = new Pendu( 8);
 	}
 	if (isset($_POST['letter']))
 	{
-		echo $_POST['letter'];
-		$_SESSION['pendu']->verification($_POST['letter']);
+		$msg = $_SESSION['pendu']->verification($_POST['letter']);
 	}
-	var_dump($_SESSION['pendu']);
 ?>
 <div id="jeu"><?php echo implode($_SESSION['pendu']->affichage) ?></div><br>
 <form name="pendu" method="post" action="vue.php">
@@ -23,5 +22,6 @@
 				<input type="submit" name="letter" value="&#<?php echo $i ?>"/>
 		<?php }
 		}
+		echo '<br><br><h2>'.$msg.'</h2>';
 	?>
 </form>
