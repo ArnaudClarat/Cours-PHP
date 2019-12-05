@@ -39,7 +39,7 @@
                 <li><input type="text" size="50" name="pu" value="<?php echo $prod['pu_prod']?>"></li>
                 <li><input type="text" size="50" name="desc" value="<?php echo $prod['descriptif_prod']?>"></li>
                 <li><input type="text" size="50" name="photo" value="<?php echo $prod['photo_prod']?>"></li>
-                <li><input type="image" name="refresh" src="boutons/refresh.png"></li>
+                <li><input type="image" name="refresh" src="TableauProd/boutons/refresh.png"></li>
             </ul>
         </form>
         </table>
@@ -55,8 +55,8 @@
     	    <td><?php echo $prod['nom_prod']?></td>
             <td><?php echo $prod['pu_prod']?> €</td>
             <td><?php echo $prod['descriptif_prod']?></td>
-            <td><input type="image" name="delete" src="boutons/del.png" alt="delete"></td>
-            <td><input type="image" name="update" src="boutons/modify.png" alt="update"></td>
+            <td><input type="image" name="delete" src="TableauProd/boutons/del.png" alt="delete"></td>
+            <td><input type="image" name="update" src="TableauProd/boutons/modify.png" alt="update"></td>
         </tr> <br>
         <tr>
             <td><img alt="product_image" src="photo/<?php echo $prod['photo_prod']?>" width='500'/></td>

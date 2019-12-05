@@ -1,5 +1,5 @@
 <?php
-	include ('Pendu.php');
+	include('Pendu.php');
 	session_start();
 	$msg = '';
 	
@@ -14,7 +14,7 @@
 	
 	if ($_SESSION['pendu']->getStatus() === 'Gagné')
     {
-	    $msg =  "YOU WON ! GG !
+	    $msg = "YOU WON ! GG !
         <form name='pendu' method='post' action='vue.php'>
             <input type='submit' name='retry' value='Retry'>
         </form>";
