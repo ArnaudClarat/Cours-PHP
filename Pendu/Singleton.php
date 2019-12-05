@@ -1,15 +1,15 @@
 <?php
 	class Singleton
 	{
-		private static $single;
-		
-		public function __construct()
-		{
-			set_single();
-		}
+		private $single;
 		
 		private function set_single()
 		{
-			self::single=1;
+			$this->single=1;
+		}
+		
+		public function __construct()
+		{
+			$this->set_single();
 		}
 	}
