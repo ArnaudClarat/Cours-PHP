@@ -18,3 +18,7 @@ wampthemes/
 .idea/webServers.xml
 .idea/www.iml
 marc/
+.idea/$PRODUCT_WORKSPACE_FILE$
+.idea/codeStyles/
+.idea/git_toolbox_prj.xml
+!/PanierdAchat/index.php
