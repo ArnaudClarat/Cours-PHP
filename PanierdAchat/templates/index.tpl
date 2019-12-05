@@ -1,9 +1,16 @@
 <div>
-    <p style="background-color: {if isset($sexe === 'F')} pink {else} blue {/if}" >
-        {if isset($name)}
-            Hello {$name}
+    <p style="background-color:
+        {if isset($sexe === 'F')}
+            pink
         {else}
-            Hello Nobody
-        {/if}
+            blue
+        {/if}" >
+
+            {if isset($name)}
+                Hello {$name}
+            {else}
+                Hello Nobody
+            {/if}
+
     </p>
 </div>
