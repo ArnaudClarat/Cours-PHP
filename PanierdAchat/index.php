@@ -8,6 +8,9 @@
 	$smarty->config_dir = './configs/';
 	$smarty->cache_dir = './cache/';
 	
-	$smarty->assign(array());
+	$smarty->assign(array(
+		'name' => 'Arnaud',
+		'sexe' => 'M',
+	));
 	
 	$smarty->display('index.tpl');
