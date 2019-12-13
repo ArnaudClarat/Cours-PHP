@@ -1,16 +1,13 @@
 <?php
-	require_once('./libs/smarty/Smarty.class.php');
+	require_once('classes/SmartyLoader.php');
 	
-	$smarty = new Smarty();
-	
-	$smarty->template_dir = './templates/';
-	$smarty->compile_dir = './templates_c/';
-	$smarty->config_dir = './configs/';
-	$smarty->cache_dir = './cache/';
+	$smarty = new SmartyLoader();
 	
 	$smarty->assign(array(
 		'name' => 'Arnaud',
 		'sexe' => 'M',
 	));
 	
+	$smarty->getHeader("Mon titre");
 	$smarty->display('index.tpl');
+	$smarty->getFooter();

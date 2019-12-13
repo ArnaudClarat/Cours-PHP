@@ -17,7 +17,7 @@
  * @property int $_objType
  *
  * The following methods will be dynamically loaded by the extension handler when they are called.
- * They are located in a corresponding Smarty_Internal_Method_xxxx class
+ * They are located in a corresponding Smarty_Internal_Method_xxxx classes
  *
  * @method Smarty_Internal_TemplateBase addAutoloadFilters(mixed $filters, string $type = null)
  * @method Smarty_Internal_TemplateBase addDefaultModifiers(mixed $modifiers)

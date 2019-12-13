@@ -74,7 +74,7 @@ class Smarty_Internal_Runtime_Capture
     }
 
     /**
-     * Register callbacks in template class
+     * Register callbacks in template classes
      *
      * @param \Smarty_Internal_Template $_template
      */

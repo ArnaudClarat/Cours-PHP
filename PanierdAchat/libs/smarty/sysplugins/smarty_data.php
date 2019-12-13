@@ -9,7 +9,7 @@
  */
 
 /**
- * class for the Smarty data object
+ * classes for the Smarty data object
  * The Smarty data object will hold Smarty variables in the current scope
  *
  * @package    Smarty

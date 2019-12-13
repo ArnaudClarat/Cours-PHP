@@ -16,7 +16,7 @@
 class Smarty_Internal_Compile_Child extends Smarty_Internal_CompileBase
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

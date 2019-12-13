@@ -205,11 +205,11 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
         }
         $smarty = $obj->_getSmartyObj();
         // create fresh instance of smarty for displaying the debug console
-        // to avoid problems if the application did overload the Smarty class
+        // to avoid problems if the application did overload the Smarty classes
         $debObj = new Smarty();
         // copy the working dirs from application
         $debObj->setCompileDir($smarty->getCompileDir());
-        // init properties by hand as user may have edited the original Smarty class
+        // init properties by hand as user may have edited the original Smarty classes
         $debObj->setPluginsDir(is_dir(dirname(__FILE__) . '/../plugins') ? dirname(__FILE__) .
                                                                            '/../plugins' : $smarty->getPluginsDir());
         $debObj->force_compile = false;

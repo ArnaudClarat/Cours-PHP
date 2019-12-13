@@ -17,7 +17,7 @@
 class Smarty_Internal_Compile_Private_Object_Function extends Smarty_Internal_CompileBase
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

@@ -17,14 +17,14 @@
 class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCompilerBase
 {
     /**
-     * Lexer class name
+     * Lexer classes name
      *
      * @var string
      */
     public $lexer_class;
 
     /**
-     * Parser class name
+     * Parser classes name
      *
      * @var string
      */
@@ -61,8 +61,8 @@ class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCom
     /**
      * Initialize compiler
      *
-     * @param string $lexer_class  class name
-     * @param string $parser_class class name
+     * @param string $lexer_class  classes name
+     * @param string $parser_class classes name
      * @param Smarty $smarty       global instance
      */
     public function __construct($lexer_class, $parser_class, Smarty $smarty)

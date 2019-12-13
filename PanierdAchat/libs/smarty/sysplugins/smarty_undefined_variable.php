@@ -1,8 +1,8 @@
 <?php
 
 /**
- * class for undefined variable object
- * This class defines an object for undefined variable handling
+ * classes for undefined variable object
+ * This classes defines an object for undefined variable handling
  *
  * @package    Smarty
  * @subpackage Template

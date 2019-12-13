@@ -16,7 +16,7 @@
 class Smarty_Internal_Compile_Block extends Smarty_Internal_Compile_Shared_Inheritance
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -24,7 +24,7 @@ class Smarty_Internal_Compile_Block extends Smarty_Internal_Compile_Shared_Inher
     public $required_attributes = array('name');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -32,7 +32,7 @@ class Smarty_Internal_Compile_Block extends Smarty_Internal_Compile_Shared_Inher
     public $shorttag_order = array('name');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -40,7 +40,7 @@ class Smarty_Internal_Compile_Block extends Smarty_Internal_Compile_Shared_Inher
     public $option_flags = array('hide', 'nocache');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -126,7 +126,7 @@ class Smarty_Internal_Compile_Blockclose extends Smarty_Internal_Compile_Shared_
         $compiler->parser->current_buffer = new Smarty_Internal_ParseTree_Template();
         $output = "<?php\n";
         $output .= "/* {block {$_name}} */\n";
-        $output .= "class {$_className} extends Smarty_Internal_Block\n";
+        $output .= "classes {$_className} extends Smarty_Internal_Block\n";
         $output .= "{\n";
         foreach ($_block as $property => $value) {
             $output .= "public \${$property} = " . var_export($value, true) . ";\n";

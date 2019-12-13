@@ -17,7 +17,7 @@
 class Smarty_Internal_Compile_Config_Load extends Smarty_Internal_CompileBase
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -25,7 +25,7 @@ class Smarty_Internal_Compile_Config_Load extends Smarty_Internal_CompileBase
     public $required_attributes = array('file');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -33,7 +33,7 @@ class Smarty_Internal_Compile_Config_Load extends Smarty_Internal_CompileBase
     public $shorttag_order = array('file', 'section');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -41,7 +41,7 @@ class Smarty_Internal_Compile_Config_Load extends Smarty_Internal_CompileBase
     public $optional_attributes = array('section', 'scope');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

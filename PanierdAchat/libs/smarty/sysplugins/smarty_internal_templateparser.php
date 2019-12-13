@@ -2807,7 +2807,7 @@ class Smarty_Internal_Templateparser
                     $this->yystack[ $this->yyidx + 0 ]->minor[ 1 ];
             }
         } else {
-            $this->compiler->trigger_template_error('static class \'' .
+            $this->compiler->trigger_template_error('static classes \'' .
                                                     $this->yystack[ $this->yyidx + -2 ]->minor .
                                                     '\' is undefined or not allowed by security setting');
         }

@@ -20,11 +20,11 @@ class Smarty_Internal_Method_LoadPlugin
 
     /**
      * Takes unknown classes and loads plugin files for them
-     * class name format: Smarty_PluginType_PluginName
+     * classes name format: Smarty_PluginType_PluginName
      * plugin filename format: plugintype.pluginname.php
      *
      * @param \Smarty $smarty
-     * @param string  $plugin_name class plugin name to load
+     * @param string  $plugin_name classes plugin name to load
      * @param bool    $check       check if already loaded
      *
      * @return bool|string
@@ -32,7 +32,7 @@ class Smarty_Internal_Method_LoadPlugin
      */
     public function loadPlugin(Smarty $smarty, $plugin_name, $check)
     {
-        // if function or class exists, exit silently (already loaded)
+        // if function or classes exists, exit silently (already loaded)
         if ($check && (is_callable($plugin_name) || class_exists($plugin_name, false))) {
             return true;
         }

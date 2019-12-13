@@ -33,7 +33,7 @@ abstract class Personne // abstract = impossible d'instancier la classe, utile s
         echo "attribut ".$name." inexistant";
     }
 
-    abstract function test(); //Fonction abstraite, donc class obligée d'être abstraite
+    abstract function test(); //Fonction abstraite, donc classes obligée d'être abstraite
 }
 
 class Femme extends Personne

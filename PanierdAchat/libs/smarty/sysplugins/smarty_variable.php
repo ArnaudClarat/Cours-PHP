@@ -1,8 +1,8 @@
 <?php
 
 /**
- * class for the Smarty variable object
- * This class defines the Smarty variable object
+ * classes for the Smarty variable object
+ * This classes defines the Smarty variable object
  *
  * @package    Smarty
  * @subpackage Template

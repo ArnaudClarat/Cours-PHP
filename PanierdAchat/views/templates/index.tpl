@@ -1,6 +1,6 @@
 <div>
     <p style="background-color:
-        {if isset($sexe === 'F')}
+        {if isset($sexe) && $sexe === 'F'}
             pink
         {else}
             blue
@@ -11,6 +11,5 @@
             {else}
                 Hello Nobody
             {/if}
-
     </p>
 </div>

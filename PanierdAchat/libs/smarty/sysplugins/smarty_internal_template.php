@@ -9,7 +9,7 @@
  */
 
 /**
- * Main class with template data structures and methods
+ * Main classes with template data structures and methods
  *
  * @package    Smarty
  * @subpackage Template
@@ -20,7 +20,7 @@
  * @property mixed|\Smarty_Template_Cached        registered_plugins
  *
  * The following methods will be dynamically loaded by the extension handler when they are called.
- * They are located in a corresponding Smarty_Internal_Method_xxxx class
+ * They are located in a corresponding Smarty_Internal_Method_xxxx classes
  *
  * @method bool mustCompile()
  */
@@ -656,7 +656,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Handle unknown class methods
+     * Handle unknown classes methods
      *
      * @param string $name unknown method-name
      * @param array  $args argument array

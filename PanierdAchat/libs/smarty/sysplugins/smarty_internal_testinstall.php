@@ -9,7 +9,7 @@
  */
 
 /**
- * TestInstall class
+ * TestInstall classes
  *
  * @package    Smarty
  * @subpackage Utilities

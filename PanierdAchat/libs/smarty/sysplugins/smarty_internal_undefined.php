@@ -12,7 +12,7 @@
 class Smarty_Internal_Undefined
 {
     /**
-     * Name of undefined extension class
+     * Name of undefined extension classes
      *
      * @var string|null
      */
@@ -21,7 +21,7 @@ class Smarty_Internal_Undefined
     /**
      * Smarty_Internal_Undefined constructor.
      *
-     * @param null|string $class name of undefined extension class
+     * @param null|string $class name of undefined extension classes
      */
     public function __construct($class = null)
     {
@@ -29,7 +29,7 @@ class Smarty_Internal_Undefined
     }
 
     /**
-     * Wrapper for obsolete class Smarty_Internal_Runtime_ValidateCompiled
+     * Wrapper for obsolete classes Smarty_Internal_Runtime_ValidateCompiled
      *
      * @param \Smarty_Internal_Template $tpl
      * @param array                     $properties special template properties
@@ -59,7 +59,7 @@ class Smarty_Internal_Undefined
     public function __call($name, $args)
     {
         if (isset($this->class)) {
-            throw new SmartyException("undefined extension class '{$this->class}'");
+            throw new SmartyException("undefined extension classes '{$this->class}'");
         } else {
             throw new SmartyException(get_class($args[ 0 ]) . "->{$name}() undefined method");
         }

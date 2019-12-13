@@ -90,7 +90,7 @@ function smarty_function_html_checkboxes($params, Smarty_Internal_Template $temp
                                 $_sel = smarty_function_escape_special_chars((string)$_sel->__toString());
                             } else {
                                 trigger_error(
-                                    'html_checkboxes: selected attribute contains an object of class \'' .
+                                    'html_checkboxes: selected attribute contains an object of classes \'' .
                                     get_class($_sel) . '\' without __toString() method',
                                     E_USER_NOTICE
                                 );
@@ -106,7 +106,7 @@ function smarty_function_html_checkboxes($params, Smarty_Internal_Template $temp
                         $selected = smarty_function_escape_special_chars((string)$_val->__toString());
                     } else {
                         trigger_error(
-                            'html_checkboxes: selected attribute is an object of class \'' . get_class($_val) .
+                            'html_checkboxes: selected attribute is an object of classes \'' . get_class($_val) .
                             '\' without __toString() method',
                             E_USER_NOTICE
                         );
@@ -224,7 +224,7 @@ function smarty_function_html_checkboxes_output(
             $value = (string)$value->__toString();
         } else {
             trigger_error(
-                'html_options: value is an object of class \'' . get_class($value) .
+                'html_options: value is an object of classes \'' . get_class($value) .
                 '\' without __toString() method',
                 E_USER_NOTICE
             );
@@ -238,7 +238,7 @@ function smarty_function_html_checkboxes_output(
             $output = (string)$output->__toString();
         } else {
             trigger_error(
-                'html_options: output is an object of class \'' . get_class($output) .
+                'html_options: output is an object of classes \'' . get_class($output) .
                 '\' without __toString() method',
                 E_USER_NOTICE
             );

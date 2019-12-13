@@ -17,7 +17,7 @@
  */
 
 /**
- * This class does contain the security settings
+ * This classes does contain the security settings
  */
 class Smarty_Security
 {
@@ -80,7 +80,7 @@ class Smarty_Security
      * Format:
      * array (
      *         'class_1' => array('method_1', 'method_2'), // allowed methods listed
-     *         'class_2' => array(),                       // all methods of class allowed
+     *         'class_2' => array(),                       // all methods of classes allowed
      *       )
      * If set to null none is allowed.
      *
@@ -94,7 +94,7 @@ class Smarty_Security
      * Format:
      * array (
      *         'class_1' => array('prop_1', 'prop_2'), // allowed properties listed
-     *         'class_2' => array(),                   // all properties of class allowed
+     *         'class_2' => array(),                   // all properties of classes allowed
      *       )
      * If set to null none is allowed.
      *
@@ -280,12 +280,12 @@ class Smarty_Security
     }
 
     /**
-     * Check if static class is trusted.
+     * Check if static classes is trusted.
      *
      * @param string $class_name
      * @param object $compiler compiler object
      *
-     * @return boolean                 true if class is trusted
+     * @return boolean                 true if classes is trusted
      */
     public function isTrustedStaticClass($class_name, $compiler)
     {
@@ -294,18 +294,18 @@ class Smarty_Security
         ) {
             return true;
         }
-        $compiler->trigger_template_error("access to static class '{$class_name}' not allowed by security setting");
+        $compiler->trigger_template_error("access to static classes '{$class_name}' not allowed by security setting");
         return false; // should not, but who knows what happens to the compiler in the future?
     }
 
     /**
-     * Check if static class method/property is trusted.
+     * Check if static classes method/property is trusted.
      *
      * @param string $class_name
      * @param string $params
      * @param object $compiler compiler object
      *
-     * @return boolean                 true if class method is trusted
+     * @return boolean                 true if classes method is trusted
      */
     public function isTrustedStaticClassAccess($class_name, $params, $compiler)
     {
@@ -332,7 +332,7 @@ class Smarty_Security
                 return true;
             }
         }
-        $compiler->trigger_template_error("access to static class '{$class_name}' {$params[2]} '{$name}' not allowed by security setting");
+        $compiler->trigger_template_error("access to static classes '{$class_name}' {$params[2]} '{$name}' not allowed by security setting");
         return false; // should not, but who knows what happens to the compiler in the future?
     }
 
@@ -655,13 +655,13 @@ class Smarty_Security
     }
 
     /**
-     * Loads security class and enables security
+     * Loads security classes and enables security
      *
      * @param \Smarty                $smarty
-     * @param string|Smarty_Security $security_class if a string is used, it must be class-name
+     * @param string|Smarty_Security $security_class if a string is used, it must be classes-name
      *
      * @return \Smarty current Smarty instance for chaining
-     * @throws \SmartyException when an invalid class name is provided
+     * @throws \SmartyException when an invalid classes name is provided
      */
     public static function enableSecurity(Smarty $smarty, $security_class)
     {
@@ -675,7 +675,7 @@ class Smarty_Security
             $security_class = $smarty->security_class;
         }
         if (!class_exists($security_class)) {
-            throw new SmartyException("Security class '$security_class' is not defined");
+            throw new SmartyException("Security classes '$security_class' is not defined");
         } elseif ($security_class !== 'Smarty_Security' && !is_subclass_of($security_class, 'Smarty_Security')) {
             throw new SmartyException("Class '$security_class' must extend Smarty_Security.");
         } else {

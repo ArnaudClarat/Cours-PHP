@@ -9,7 +9,7 @@
  */
 
 /**
- * Main abstract compiler class
+ * Main abstract compiler classes
  *
  * @package    Smarty
  * @subpackage Compiler
@@ -317,7 +317,7 @@ abstract class Smarty_Internal_TemplateCompilerBase
         'function',
         'block',
         'compiler',
-        'class'
+        'classes'
     );
 
     /**
@@ -427,7 +427,7 @@ abstract class Smarty_Internal_TemplateCompilerBase
         Smarty_Internal_TemplateCompilerBase $parent_compiler = null
     ) {
         try {
-            // save template object in compiler class
+            // save template object in compiler classes
             $this->template = $template;
             if (property_exists($this->template->smarty, 'plugin_search_order')) {
                 $this->plugin_search_order = $this->template->smarty->plugin_search_order;
@@ -744,7 +744,7 @@ abstract class Smarty_Internal_TemplateCompilerBase
     /**
      * lazy loads internal compile plugin for tag and calls the compile method
      * compile objects cached for reuse.
-     * class name format:  Smarty_Internal_Compile_TagName
+     * classes name format:  Smarty_Internal_Compile_TagName
      * plugin filename format: Smarty_Internal_TagName.php
      *
      * @param string $tag    tag name
@@ -767,7 +767,7 @@ abstract class Smarty_Internal_TemplateCompilerBase
     /**
      * lazy loads internal compile plugin for tag compile objects cached for reuse.
      *
-     * class name format:  Smarty_Internal_Compile_TagName
+     * classes name format:  Smarty_Internal_Compile_TagName
      * plugin filename format: Smarty_Internal_TagName.php
      *
      * @param string $tag tag name

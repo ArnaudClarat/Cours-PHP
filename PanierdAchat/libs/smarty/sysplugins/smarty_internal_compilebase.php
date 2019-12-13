@@ -8,7 +8,7 @@
  */
 
 /**
- * This class does extend all internal compile plugins
+ * This classes does extend all internal compile plugins
  *
  * @package    Smarty
  * @subpackage Compiler

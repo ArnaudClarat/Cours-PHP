@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Smarty compiler exception class
+ * Smarty compiler exception classes
  *
  * @package Smarty
  */

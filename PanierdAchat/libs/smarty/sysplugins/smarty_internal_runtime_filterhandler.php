@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Plugin Filter Handler
- * Smarty filter handler class
+ * Smarty filter handler classes
  *
  * @package    Smarty
  * @subpackage PluginsInternal
@@ -19,7 +19,7 @@ class Smarty_Internal_Runtime_FilterHandler
     /**
      * Run filters over content
      * The filters will be lazy loaded if required
-     * class name format: Smarty_FilterType_FilterName
+     * classes name format: Smarty_FilterType_FilterName
      * plugin filename format: filtertype.filtername.php
      * Smarty2 filter plugins could be used
      *
@@ -45,7 +45,7 @@ class Smarty_Internal_Runtime_FilterHandler
                         // use loaded Smarty2 style plugin
                         $callback = $plugin_name;
                     } elseif (class_exists($plugin_name, false) && is_callable(array($plugin_name, 'execute'))) {
-                        // loaded class of filter plugin
+                        // loaded classes of filter plugin
                         $callback = array($plugin_name, 'execute');
                     } else {
                         throw new SmartyException("Auto load {$type}-filter plugin method '{$plugin_name}::execute' not callable");

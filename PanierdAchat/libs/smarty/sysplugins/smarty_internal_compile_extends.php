@@ -17,7 +17,7 @@
 class Smarty_Internal_Compile_Extends extends Smarty_Internal_Compile_Shared_Inheritance
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -33,7 +33,7 @@ class Smarty_Internal_Compile_Extends extends Smarty_Internal_Compile_Shared_Inh
     public $optional_attributes = array('extends_resource');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

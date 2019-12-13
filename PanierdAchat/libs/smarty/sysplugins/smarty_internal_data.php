@@ -9,7 +9,7 @@
  */
 
 /**
- * Base class with template and variable methods
+ * Base classes with template and variable methods
  *
  * @package    Smarty
  * @subpackage Template
@@ -17,7 +17,7 @@
  * @property int    $scope
  * @property Smarty $smarty
  * The following methods will be dynamically loaded by the extension handler when they are called.
- * They are located in a corresponding Smarty_Internal_Method_xxxx class
+ * They are located in a corresponding Smarty_Internal_Method_xxxx classes
  *
  * @method mixed _getConfigVariable(string $varName, bool $errorEnable = true)
  * @method mixed getConfigVariable(string $varName, bool $errorEnable = true)
@@ -39,7 +39,7 @@ abstract class Smarty_Internal_Data
     public $_objType = 4;
 
     /**
-     * name of class used for templates
+     * name of classes used for templates
      *
      * @var string
      */
@@ -278,7 +278,7 @@ abstract class Smarty_Internal_Data
     }
 
     /**
-     * Handle unknown class methods
+     * Handle unknown classes methods
      *
      * @param string $name unknown method-name
      * @param array  $args argument array

@@ -34,7 +34,7 @@
  * {mailto address="me@domain.com" encode="hex"}
  * {mailto address="me@domain.com" subject="Hello to you!"}
  * {mailto address="me@domain.com" cc="you@domain.com,they@domain.com"}
- * {mailto address="me@domain.com" extra='class="mailto"'}
+ * {mailto address="me@domain.com" extra='classes="mailto"'}
  *
  * @link    http://www.smarty.net/manual/en/language.function.mailto.php {mailto}
  *           (Smarty online manual)

@@ -39,7 +39,7 @@ class Smarty_Autoloader
      *
      * @var array
      */
-    public static $rootClasses = array('smarty' => 'Smarty.class.php', 'smartybc' => 'SmartyBC.class.php',);
+    public static $rootClasses = array('smarty' => 'Smarty.classes.php', 'smartybc' => 'SmartyBC.classes.php',);
 
     /**
      * Registers Smarty_Autoloader backward compatible to older installations.
@@ -49,7 +49,7 @@ class Smarty_Autoloader
     public static function registerBC($prepend = false)
     {
         /**
-         * register the class autoloader
+         * register the classes autoloader
          */
         if (!defined('SMARTY_SPL_AUTOLOAD')) {
             define('SMARTY_SPL_AUTOLOAD', 0);
@@ -86,7 +86,7 @@ class Smarty_Autoloader
     /**
      * Handles auto loading of classes.
      *
-     * @param string $class A class name.
+     * @param string $class A classes name.
      */
     public static function autoload($class)
     {

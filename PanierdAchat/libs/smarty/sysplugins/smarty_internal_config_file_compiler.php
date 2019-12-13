@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Plugin Config File Compiler
- * This is the config file compiler class. It calls the lexer and parser to
+ * This is the config file compiler classes. It calls the lexer and parser to
  * perform the compiling.
  *
  * @package    Smarty
@@ -10,7 +10,7 @@
  */
 
 /**
- * Main config file compiler class
+ * Main config file compiler classes
  *
  * @package    Smarty
  * @subpackage Config
@@ -18,14 +18,14 @@
 class Smarty_Internal_Config_File_Compiler
 {
     /**
-     * Lexer class name
+     * Lexer classes name
      *
      * @var string
      */
     public $lexer_class;
 
     /**
-     * Parser class name
+     * Parser classes name
      *
      * @var string
      */
@@ -76,8 +76,8 @@ class Smarty_Internal_Config_File_Compiler
     /**
      * Initialize compiler
      *
-     * @param string $lexer_class  class name
-     * @param string $parser_class class name
+     * @param string $lexer_class  classes name
+     * @param string $parser_class classes name
      * @param Smarty $smarty       global instance
      */
     public function __construct($lexer_class, $parser_class, Smarty $smarty)

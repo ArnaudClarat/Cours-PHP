@@ -8,7 +8,7 @@ $id = 1;
 
 $base = new PDO('mysql:host=localhost; dbname=pdo', 'root', '');
 $sql = $base->prepare("SELECT * FROM signals WHERE id = :id");
-$sql = bindParam(id, $id);
+$sql->bindParam(id, $id);
 // $sql->bindParam($forename, $name, $sex, $phoneNumber);
 
 $st = $base->query($sql);

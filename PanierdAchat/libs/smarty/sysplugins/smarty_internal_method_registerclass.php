@@ -26,7 +26,7 @@ class Smarty_Internal_Method_RegisterClass
      *
      * @param \Smarty_Internal_TemplateBase|\Smarty_Internal_Template|\Smarty $obj
      * @param string                                                          $class_name
-     * @param string                                                          $class_impl the referenced PHP class to
+     * @param string                                                          $class_impl the referenced PHP classes to
      *                                                                                    register
      *
      * @return \Smarty|\Smarty_Internal_Template
@@ -37,9 +37,9 @@ class Smarty_Internal_Method_RegisterClass
         $smarty = $obj->_getSmartyObj();
         // test if exists
         if (!class_exists($class_impl)) {
-            throw new SmartyException("Undefined class '$class_impl' in register template class");
+            throw new SmartyException("Undefined classes '$class_impl' in register template classes");
         }
-        // register the class
+        // register the classes
         $smarty->registered_classes[ $class_name ] = $class_impl;
         return $obj;
     }

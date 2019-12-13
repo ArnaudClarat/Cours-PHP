@@ -1,7 +1,7 @@
 <?php
 /**
  * Project:     Smarty: the PHP compiling template engine
- * File:        Smarty.class.php
+ * File:        Smarty.classes.php
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -81,7 +81,7 @@ if (!class_exists('Smarty_Autoloader')) {
     include dirname(__FILE__) . '/bootstrap.php';
 }
 /**
- * Load always needed external class files
+ * Load always needed external classes files
  */
 require_once SMARTY_SYSPLUGINS_DIR . 'smarty_internal_data.php';
 require_once SMARTY_SYSPLUGINS_DIR . 'smarty_internal_extension_handler.php';
@@ -94,12 +94,12 @@ require_once SMARTY_SYSPLUGINS_DIR . 'smarty_template_resource_base.php';
 require_once SMARTY_SYSPLUGINS_DIR . 'smarty_internal_resource_file.php';
 
 /**
- * This is the main Smarty class
+ * This is the main Smarty classes
  *
  * @package Smarty
  *
  * The following methods will be dynamically loaded by the extension handler when they are called.
- * They are located in a corresponding Smarty_Internal_Method_xxxx class
+ * They are located in a corresponding Smarty_Internal_Method_xxxx classes
  *
  * @method int clearAllCache(int $exp_time = null, string $type = null)
  * @method int clearCache(string $template_name, string $cache_id = null, string $compile_id = null, int $exp_time = null, string $type = null)
@@ -355,7 +355,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     public $literals = array();
 
     /**
-     * class name
+     * classes name
      * This should be instance of Smarty_Security.
      *
      * @var string
@@ -364,7 +364,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     public $security_class = 'Smarty_Security';
 
     /**
-     * implementation of security class
+     * implementation of security classes
      *
      * @var Smarty_Security
      */
@@ -726,9 +726,9 @@ class Smarty extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Loads security class and enables security
+     * Loads security classes and enables security
      *
-     * @param string|Smarty_Security $security_class if a string is used, it must be class-name
+     * @param string|Smarty_Security $security_class if a string is used, it must be classes-name
      *
      * @return Smarty                 current Smarty instance for chaining
      * @throws \SmartyException
@@ -1052,10 +1052,10 @@ class Smarty extends Smarty_Internal_TemplateBase
 
     /**
      * Takes unknown classes and loads plugin files for them
-     * class name format: Smarty_PluginType_PluginName
+     * classes name format: Smarty_PluginType_PluginName
      * plugin filename format: plugintype.pluginname.php
      *
-     * @param string $plugin_name class plugin name to load
+     * @param string $plugin_name classes plugin name to load
      * @param bool   $check       check if already loaded
      *
      * @return string |boolean filepath of loaded file or false

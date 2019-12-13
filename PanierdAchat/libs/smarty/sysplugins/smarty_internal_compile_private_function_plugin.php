@@ -17,7 +17,7 @@
 class Smarty_Internal_Compile_Private_Function_Plugin extends Smarty_Internal_CompileBase
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -25,7 +25,7 @@ class Smarty_Internal_Compile_Private_Function_Plugin extends Smarty_Internal_Co
     public $required_attributes = array();
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

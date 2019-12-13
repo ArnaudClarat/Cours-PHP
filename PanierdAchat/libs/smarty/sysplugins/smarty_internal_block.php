@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Smarty {block} tag class
+ * Smarty {block} tag classes
  *
  * @package    Smarty
  * @subpackage PluginsInternal
@@ -80,7 +80,7 @@ class Smarty_Internal_Block
     }
 
     /**
-     * Compiled block code overloaded by {block} class
+     * Compiled block code overloaded by {block} classes
      *
      * @param \Smarty_Internal_Template $tpl
      */

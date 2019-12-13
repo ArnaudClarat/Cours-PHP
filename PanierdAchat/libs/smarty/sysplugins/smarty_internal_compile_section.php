@@ -17,7 +17,7 @@
 class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_ForeachSection
 {
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -25,7 +25,7 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
     public $required_attributes = array('name', 'loop');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
@@ -33,7 +33,7 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
     public $shorttag_order = array('name', 'loop');
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites base classes.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
