@@ -1,5 +1,5 @@
 <head>
-    <title>{$title}</title>
+    <title>MonSite - {$title}</title>
     {if isset($assets) && is_array($assets)}
         {*CSS INCLUSION*}
         {if !empty($assets['css'])}
@@ -38,30 +38,37 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Catégories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Catégorie 1</a>
+                        <a class="dropdown-item" href="#">Catégorie 2</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Catégorie3</a>
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                {*
+                <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
+                *}
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline m-auto">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <ul>
+                <li>
+                    <a class="nav-item active">Panier</a>
+                </li>
+            </ul>
         </div>
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}

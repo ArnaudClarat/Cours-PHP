@@ -22,3 +22,4 @@ marc/
 .idea/codeStyles/
 .idea/git_toolbox_prj.xml
 !/PanierdAchat/index.php
+!/bacinfo2_panier/index.php
