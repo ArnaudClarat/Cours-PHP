@@ -14,10 +14,6 @@ header,
     }
 }
 
-.top-nav-collapse {
-    background-color: #78909c !important;
-}
-
 .navbar:not(.top-nav-collapse) {
     background: transparent !important;
 }
@@ -36,7 +32,3 @@ h5 {
     letter-spacing: 3px;
 }
 
-.hr-light {
-    border-top: 3px solid #fff;
-    width: 80px;
-}
