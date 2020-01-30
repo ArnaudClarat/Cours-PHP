@@ -29,7 +29,7 @@
 </head>
 <div id="header">
     {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary   ">
         <a class="navbar-brand" href="#">MonSite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@
             {*Centré*}
             <form class="form-inline m-auto" role="group">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
 
             {*Droite*}
