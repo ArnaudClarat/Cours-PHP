@@ -1,5 +1,6 @@
 <head>
     <title>MonSite - {$title}</title>
+    <meta charset="UTF-8">
     {if isset($assets) && is_array($assets)}
         {*CSS INCLUSION*}
         {if !empty($assets['css'])}

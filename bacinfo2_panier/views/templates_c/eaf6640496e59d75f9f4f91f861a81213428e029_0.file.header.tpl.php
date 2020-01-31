@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-01-30 13:29:35
+/* Smarty version 3.1.33, created on 2020-01-30 19:17:25
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e32da3f17f166_43933848',
+  'unifunc' => 'content_5e332bc50d6d16_32435882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1580390972,
+      1 => 1580411842,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e32da3f17f166_43933848 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e332bc50d6d16_32435882 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title>MonSite - <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
+    <meta charset="UTF-8">
     <?php if (isset($_smarty_tpl->tpl_vars['assets']->value) && is_array($_smarty_tpl->tpl_vars['assets']->value)) {?>
                 <?php if (!empty($_smarty_tpl->tpl_vars['assets']->value['css'])) {?>
             <?php

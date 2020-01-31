@@ -34,8 +34,8 @@ DROP TABLE IF EXISTS `t_products`;
 CREATE TABLE IF NOT EXISTS `t_products` (
   `id_prod` int(11) NOT NULL AUTO_INCREMENT,
   `name_prod` varchar(250) NOT NULL,
-  `short-desc_prod` text NOT NULL,
-  `long-desc_prod` text NOT NULL,
+  `shortDesc_prod` text NOT NULL,
+  `longDesc_prod` text NOT NULL,
   `price_prod` decimal(10,2) NOT NULL,
   `stock_prod` int(11) NOT NULL,
   PRIMARY KEY (`id_prod`)
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `t_products` (
 -- Déchargement des données de la table `t_products`
 --
 
-INSERT INTO `t_products` (`id_prod`, `name_prod`, `short-desc_prod`, `long-desc_prod`, `price_prod`, `stock_prod`) VALUES
+INSERT INTO `t_products` (`id_prod`, `name_prod`, `shortDesc_prod`, `longDesc_prod`, `price_prod`, `stock_prod`) VALUES
 (1, '4 savons', '4 savons parfumés', 'Lorem Ipsum 1', '150.00', 495),
 (2, '4 savons lavandes', '4 savons parfumés à la a la lavande', 'Lorem Ipsum 2', '174.99', 4896),
 (3, '6 savons', '6 savons aux differents parfums', 'Lorem Ipsum 3', '249.99', 984),
