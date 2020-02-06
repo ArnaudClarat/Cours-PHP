@@ -21,6 +21,6 @@ marc/
 .idea/$PRODUCT_WORKSPACE_FILE$
 .idea/codeStyles/
 .idea/git_toolbox_prj.xml
-!/PanierdAchat/index.php
-!/bacinfo2_panier/index.php
-!/bacinfo2_panier/vendors/*
+!PanierdAchat/index.php
+!bacinfo2_panier/index.php
+!bacinfo2_panier/vendors/
