@@ -1,6 +1,5 @@
 <head>
     <title>MonSite - {$title}</title>
-    <meta charset="UTF-8">
     {if isset($assets) && is_array($assets)}
         {*CSS INCLUSION*}
         {if !empty($assets['css'])}
@@ -30,17 +29,16 @@
 </head>
 <div id="header">
     {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
-    <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary   ">
-        <a class="navbar-brand" href="#">MonSite</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            {*Gauche*}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,35 +48,27 @@
                         <a class="dropdown-item" href="#">Catégorie 1</a>
                         <a class="dropdown-item" href="#">Catégorie 2</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Catégorie 3</a>
+                        <a class="dropdown-item" href="#">Catégorie3</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-                {* DISABLE NAV LINK
+                {*
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
                 *}
             </ul>
-
-            {*Centré*}
-            <form class="form-inline m-auto" role="group">
+            <form class="form-inline m-auto">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-
-            {*Droite*}
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn border-dark" style="font-size: 1.4em">
-                    <i class="fas fa-shopping-cart"></i>
-                </button>
-            </form>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Connection</button>
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Créer un compte</button>
-            </form>
+            <ul>
+                <li>
+                    <a class="nav-item active">Panier</a>
+                </li>
+            </ul>
         </div>
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
