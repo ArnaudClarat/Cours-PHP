@@ -23,3 +23,4 @@ marc/
 .idea/git_toolbox_prj.xml
 !/PanierdAchat/index.php
 !/bacinfo2_panier/index.php
+!/bacinfo2_panier/vendors/*
