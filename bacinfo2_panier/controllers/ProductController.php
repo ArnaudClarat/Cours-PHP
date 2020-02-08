@@ -3,23 +3,20 @@ require_once('./controllers/BaseController.php');
 require_once('./classes/DB.php');
 require_once('./classes/Product.php');
 
-class HomeController extends BaseController
+class ProductController extends BaseController
 {
-    function getDatas($nbr)
+    public function getProduct($i)
     {
-        for ($i = 1; $i <= $nbr; $i++) {
-            $products[] = new Product($i);
-        }
-        return $products;
+        return new Product($i);
     }
 
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'products' => $this->getDatas(10)
+            'product' => $this->getProduct(1),
         );
     }
 
-    protected $name = 'Home';
+    protected $name = 'product';
 }

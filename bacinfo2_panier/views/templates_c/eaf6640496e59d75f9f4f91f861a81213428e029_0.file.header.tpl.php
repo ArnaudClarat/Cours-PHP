@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-01-16 19:58:43
+/* Smarty version 3.1.33, created on 2020-02-06 20:12:56
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e20c073494361_41960314',
+  'unifunc' => 'content_5e3c73486f9fb7_39543337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1579204720,
+      1 => 1581019806,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e20c073494361_41960314 (Smarty_Internal_Template $_smarty_tpl) {
-?>    <head>
+function content_5e3c73486f9fb7_39543337 (Smarty_Internal_Template $_smarty_tpl) {
+?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</title>
+ - MonSite</title>
+    <meta charset="UTF-8">
     <?php if (isset($_smarty_tpl->tpl_vars['assets']->value) && is_array($_smarty_tpl->tpl_vars['assets']->value)) {?>
                 <?php if (!empty($_smarty_tpl->tpl_vars['assets']->value['css'])) {?>
             <?php
@@ -50,9 +51,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-                <?php echo '<script'; ?>
- src="https://kit.fontawesome.com/dcd0338b0b.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
         <?php }?>
         
                 <?php if (!empty($_smarty_tpl->tpl_vars['assets']->value['js'])) {?>
@@ -73,41 +71,43 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php }?>
 </head>
 <div id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">NomDuSite</a>
+        <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary   ">
+        <a class="navbar-brand" href="#">MonSite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+                        <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catégorie
+                        Catégories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">1ère Catégorie</a>
-                        <a class="dropdown-item" href="#">2ème Catégorie</a>
+                        <a class="dropdown-item" href="#">Produits</a>
+                        <a class="dropdown-item" href="#">Catégorie 2</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">3ème Catégorie</a>
+                        <a class="dropdown-item" href="#">Catégorie 3</a>
                     </div>
                 </li>
-            </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                            </ul>
 
-            <form class="form-inline m-auto" role="group">
+                        <form class="form-inline m-auto" role="group">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
 
-            <form class="form-inline my-2 my-lg-0">
+                        <form class="form-inline my-2 my-lg-0">
                 <button class="btn border-dark" style="font-size: 1.4em">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
             </form>
-
             <form class="form-inline my-2 my-lg-0">
                 <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Connection</button>
                 <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Créer un compte</button>
