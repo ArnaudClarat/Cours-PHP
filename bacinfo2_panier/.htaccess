@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteBase /panier/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ Cours-PHP/bacinfo2_panier [QSA,L]
+RewriteRule ^(.+)$ /bacinfo2_panier/ [QSA,L]

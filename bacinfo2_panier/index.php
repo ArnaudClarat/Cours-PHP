@@ -6,7 +6,7 @@ foreach (glob(__DIR__."/controllers/*.php") as $filename)
 }
 
 $request = explode('/', $_SERVER['REQUEST_URI'])[2];
-
+var_dump($_SERVER['REQUEST_URI']);
 switch ($request) {
     case '' :
         $controller = new HomeController();
