@@ -5,10 +5,6 @@ require_once('./classes/Categorie.php');
 
 class CategorieController
 {
-    public function getCategories()
-    {
-        return Categorie::getCategories();
-    }
 
     protected function getTemplateVars()
     {

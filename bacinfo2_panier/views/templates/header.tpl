@@ -47,10 +47,9 @@
                         Catégories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Produits</a>
-                        <a class="dropdown-item" href="#">Catégorie 2</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Catégorie 3</a>
+                        {foreach $categories as $categorie}
+                            <a class="dropdown-item" href="#">{$categorie['name_categ']}</a>
+                        {/foreach}
                     </div>
                 </li>
                 <li class="nav-item">

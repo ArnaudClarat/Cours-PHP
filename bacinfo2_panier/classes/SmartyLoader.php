@@ -14,13 +14,14 @@ class SmartyLoader extends Smarty
         $this->cache_dir = './views/cache/';
     }
 
-    public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title)
+    public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title, $categories)
     {
         $assets['css'][]='./views/css/global.css';
         $this->assign(array(
             'title' => $title,
             'assets' => $assets,
             'bootstrap' => $bootstrap,
+            'categories' => $categories,
         ));
         $this->display('header.tpl');
     }

@@ -6,6 +6,11 @@ abstract class BaseController
     protected $name = 'base';
     protected $smarty;
 
+    public function getCategories()
+    {
+        return Categorie::getCategories();
+    }
+
     public function __construct()
     {
         $this->smarty = new SmartyLoader();
@@ -14,7 +19,7 @@ abstract class BaseController
 
     protected function renderView()
     {
-        $this->smarty->getHeader($this->getAssets(), true, $this->name);
+        $this->smarty->getHeader($this->getAssets(), true, $this->name, $this->getCategories());
         $this->smarty->assign($this->getTemplateVars());
         $this->smarty->display(strtolower($this->name).'.tpl');
         $this->smarty->getFooter();

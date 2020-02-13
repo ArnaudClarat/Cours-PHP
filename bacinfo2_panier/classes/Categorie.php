@@ -19,9 +19,8 @@ class Categorie extends BaseEntity
     public static function getCategories()
     {
         $db = DB::getInstance();
-        $sql = 'SELECT * FROM t_categories';
-        $st = $db->query($sql);
-        return $st->fetch(PDO::FETCH_ASSOC);
+        $sql = 'SELECT `name_categ` FROM t_categories';
+        return $db->query($sql);
     }
 
     public function getIdCateg()

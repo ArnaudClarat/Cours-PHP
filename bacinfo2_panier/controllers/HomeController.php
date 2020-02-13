@@ -5,7 +5,8 @@ require_once('./classes/Product.php');
 
 class HomeController extends BaseController
 {
-    function getDatas($nbr)
+
+    public function getDatas($nbr)
     {
 /*        $db = DB::getInstance();
         $st = $db->query('SELECT id_prod FROM t_products');

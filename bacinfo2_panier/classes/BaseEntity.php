@@ -27,4 +27,6 @@ abstract class BaseEntity
         $st = $db->query($sql);
         return $st->fetch(PDO::FETCH_ASSOC);
     }
+
+    // TODO getEntities() All
 }
