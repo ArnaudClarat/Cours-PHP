@@ -2,6 +2,6 @@
     <br>
     <div class="row">
         <p>jnfiupbqlkjbg</p>
-        {var_dump($produit)}
+        {var_dump($product)}
     </div>
 </div>
