@@ -2,6 +2,6 @@
     <br>
     <div class="row">
         <p>jnfiupbqlkjbg</p>
-        {var_dump($smarty.post.id)}
+        {var_dump($produit)}
     </div>
 </div>

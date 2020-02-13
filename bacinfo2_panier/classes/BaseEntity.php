@@ -23,7 +23,7 @@ abstract class BaseEntity
     public function getDatas($id)
     {
         $db = DB::getInstance();
-        $sql = 'SELECT * FROM '.static::$definition['table'].' WHERE id_prod = '.$id;
+        $sql = 'SELECT * FROM '.static::$definition['table'].' WHERE '.static::$definition['primary'].' = $id';
         $st = $db->query($sql);
         return $st->fetch(PDO::FETCH_ASSOC);
     }
