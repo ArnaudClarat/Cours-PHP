@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-13 18:50:11
+/* Smarty version 3.1.33, created on 2020-02-13 20:32:55
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e459a63581ac6_27777293',
+  'unifunc' => 'content_5e45b27739b8c3_18619139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '21813387d6b056946b1a845a0bb4831d4c179b61' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\product.tpl',
-      1 => 1581619801,
+      1 => 1581625965,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,55 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e459a63581ac6_27777293 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e45b27739b8c3_18619139 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row">
-        <?php echo "Affichage produit à faire";?>
+        <div class="col-md-12">
+            <h2 class="bd-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
+</h2>
+            <h6 class="bd-lead"><?php echo $_smarty_tpl->tpl_vars['product']->value->getShortDesc();?>
+</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="./views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
+">
+        </div>
+        <div class="col-md-5">
+            <p>
+                <?php echo $_smarty_tpl->tpl_vars['product']->value->getLongDesc();?>
 
-            </div>
+            </p>
+        </div>
+        <div class="col-md-3 bg-primary">
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><?php echo $_smarty_tpl->tpl_vars['product']->value->getPrice();?>
+€</label><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            Quantité :
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-number-input" class="col-2 col-form-label">Number</label>
+                            <div class="col-4">
+                                <input class="form-control" type="number" value="42" id="example-number-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <?php echo var_dump($_smarty_tpl->tpl_vars['product']->value);?>
+
+    </div>
 </div><?php }
 }
