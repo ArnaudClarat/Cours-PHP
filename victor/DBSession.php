@@ -15,8 +15,7 @@ class DBSession {
             ORDER BY RAND()
             LIMIT 1
             ';
-        $stmt = $bd->prepare($sql);
-        $stmt -> execute();
+        $stmt = $bd->query($sql);
         $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         return $row['Name'];
     }

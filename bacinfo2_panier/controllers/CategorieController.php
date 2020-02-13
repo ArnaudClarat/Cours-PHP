@@ -1,11 +1,7 @@
 <?php
-require_once('./controllers/BaseController.php');
-require_once('./classes/DB.php');
-require_once('./classes/Categorie.php');
 
-class CategorieController
+class CategorieController extends BaseController
 {
-
     protected function getTemplateVars()
     {
         return array(

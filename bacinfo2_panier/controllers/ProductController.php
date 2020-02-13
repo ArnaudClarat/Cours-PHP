@@ -1,7 +1,4 @@
 <?php
-require_once('./controllers/BaseController.php');
-require_once('./classes/DB.php');
-require_once('./classes/Product.php');
 
 class ProductController extends BaseController
 {

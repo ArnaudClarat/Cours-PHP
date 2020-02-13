@@ -1,5 +1,4 @@
 <?php
-require_once('./classes/BaseEntity.php');
 
 class Product extends BaseEntity
 {
@@ -73,7 +72,7 @@ class Product extends BaseEntity
     }
     */
 
-    static function getAllProducts()
+    public static function getAllProducts()
     {
         // TODO
     }

@@ -1,5 +1,4 @@
 <?php
-require_once('./classes/SmartyLoader.php');
 
 abstract class BaseController
 {
