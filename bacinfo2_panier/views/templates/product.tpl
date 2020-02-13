@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <div class="row">
-        {echo("Affichage produit à faire")}
+        <p>Affichage produit à faire</p>
         {* TODO Affichage produit à faire *}
     </div>
 </div>

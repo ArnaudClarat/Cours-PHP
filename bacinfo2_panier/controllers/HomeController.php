@@ -7,7 +7,11 @@ class HomeController extends BaseController
 {
     function getDatas($nbr)
     {
-        for ($i = 1; $i <= $nbr; $i++) {
+/*        $db = DB::getInstance();
+        $st = $db->query('SELECT id_prod FROM t_products');
+        $st->fetch();
+        var_dump($st);*/
+        for ($i = 11; $i <= $nbr+10; $i++) {
             $products[] = new Product($i);
         }
         return $products;

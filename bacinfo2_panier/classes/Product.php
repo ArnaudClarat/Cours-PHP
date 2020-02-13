@@ -23,11 +23,6 @@ class Product extends BaseEntity
         )
     );
 
-    public function getTable()
-    {
-        return $this->table;
-    }
-
     public function getId()
     {
         return $this->id_prod;
