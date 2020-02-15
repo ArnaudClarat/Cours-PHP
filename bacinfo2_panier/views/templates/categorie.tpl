@@ -7,9 +7,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{$product->getName()}</h5>
                     <p class="card-text">{$product->getShortDesc()}</p>
-                    <form action="product?id={$product->getId()}" method="post">
-                        <input type="submit" class="btn btn-primary" value="Plus d'info..">
-                    </form>
+                    <a href="product?id={$product->getId()}"> Plus d'info..</a>
                 </div>
             </div>
         {/foreach}

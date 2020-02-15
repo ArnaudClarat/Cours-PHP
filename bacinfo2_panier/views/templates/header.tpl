@@ -63,8 +63,8 @@
             </ul>
 
             {*Centré*}
-            <form class="form-inline m-auto" role="group">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline m-auto" role="search" action="search?">
+                <input class="form-control mr-sm-2 ds-input" type="search" placeholder="Search..." aria-label="Search...">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
 

@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{$product->getName()}</h5>
                     <p class="card-text">{$product->getShortDesc()}</p>
-                    <a href="product?id={$product->getId()}"> Plus d'info..</a>
+                    <a href="product?id={$product->getId()}">Plus d'info..</a>
                 </div>
             </div>
         {/foreach}

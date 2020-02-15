@@ -36,6 +36,18 @@ class Product extends BaseEntity
         return $produits;
     }
 
+    public static function getAllProducts()
+    {
+        $db = DB::getInstance();
+        $st = $db->query('SELECT * FROM t_products');
+        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($arr as $pid)
+        {
+            $produits[] = new self($pid['id_prod']);
+        }
+        return $produits;
+    }
+
     public function getId()
     {
         return $this->id_prod;
@@ -66,11 +78,6 @@ class Product extends BaseEntity
         return $this->stock_prod;
     }
 
-    public static function getDefinition()
-    {
-        return self::$definition;
-    }
-
 
     /*
     public function __construct($id)
@@ -85,9 +92,4 @@ class Product extends BaseEntity
         }
     }
     */
-
-    public static function getAllProducts()
-    {
-        // TODO
-    }
 }
