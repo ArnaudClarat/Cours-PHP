@@ -1,4 +1,6 @@
 <?php
+require_once('BaseEntity.php');
+require_once('DB.php');
 
 class Categorie extends BaseEntity
 {

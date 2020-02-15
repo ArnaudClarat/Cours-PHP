@@ -1,4 +1,5 @@
 <?php
+require_once('./classes/Product.php');
 
 class HomeController extends BaseController
 {
