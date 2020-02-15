@@ -11,7 +11,7 @@ switch ($request) {
         $controller = new HomeController();
         break;
 
-    case 'product' :
+    case (preg_match('/product*/', $request) ? true : false) :
         $controller = new ProductController();
         break;
 

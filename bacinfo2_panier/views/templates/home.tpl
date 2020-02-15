@@ -7,9 +7,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{$product->getName()}</h5>
                     <p class="card-text">{$product->getShortDesc()}</p>
-                    <form action="product" method="post">
+                    <form action="product?id={$product->getId()}" method="post">
                         <input type="submit" class="btn btn-primary" value="Plus d'info..">
-                        <input type="hidden" name="id" id="bla" value="{$product->getId()}">
                     </form>
                 </div>
             </div>

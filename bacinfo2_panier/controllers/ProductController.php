@@ -11,7 +11,7 @@ class ProductController extends BaseController
     {
         return array(
             'controller' => $this->name,
-            'product' => $this->getProduct($_POST['id']), //$_POST['id']
+            'product' => $this->getProduct($_GET['id']),
         );
     }
 
