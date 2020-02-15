@@ -31,7 +31,7 @@
 <div id="header">
     {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
     <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary   ">
-        <a class="navbar-brand" href="#">MonSite</a>
+        <a class="navbar-brand" href="./">MonSite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,7 +40,7 @@
             {*Gauche*}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./">Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,7 +48,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {foreach $categories as $categorie}
-                            <a class="dropdown-item" href="#">{$categorie['name_categ']}</a>
+                            <a class="dropdown-item" href="categorie?id={$categorie['id_categ']}">{$categorie['name_categ']}</a>
                         {/foreach}
                     </div>
                 </li>

@@ -15,6 +15,10 @@ switch ($request) {
         $controller = new ProductController();
         break;
 
+    case (preg_match('/categorie*/', $request) ? true : false) :
+        $controller = new CategorieController();
+        break;
+
     default:
         http_response_code(404);
         echo '404';

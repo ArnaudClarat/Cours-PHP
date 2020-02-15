@@ -1,12 +1,18 @@
 <?php
+require_once('./classes/Product.php');
 
 class CategorieController extends BaseController
 {
+    protected function getProducts($id)
+    {
+        return Product::getCategorie($id);
+    }
+
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'categories' => $this->getCategories()
+            'products'=> $this->getProducts($_GET['id']),
         );
     }
 

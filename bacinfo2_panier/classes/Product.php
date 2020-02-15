@@ -22,6 +22,20 @@ class Product extends BaseEntity
         )
     );
 
+    public static function getCategorie($id)
+    {
+        $db = DB::getInstance();
+        $st = $db->query('SELECT id_prod FROM t_products 
+                                    LEFT JOIN t_categories on t_products.id_categ = t_categories.id_categ
+                                    WHERE t_categories.id_categ = '.$id);
+        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($arr as $pid)
+        {
+            $produits[] = new self($pid['id_prod']);
+        }
+        return $produits;
+    }
+
     public function getId()
     {
         return $this->id_prod;
