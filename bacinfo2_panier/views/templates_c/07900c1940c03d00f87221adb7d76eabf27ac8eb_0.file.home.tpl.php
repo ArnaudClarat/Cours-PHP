@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-15 07:58:57
+/* Smarty version 3.1.33, created on 2020-02-15 14:25:55
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e47a4c13d71f3_13935198',
+  'unifunc' => 'content_5e47ff738774f1_05932148',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '07900c1940c03d00f87221adb7d76eabf27ac8eb' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\home.tpl',
-      1 => 1581753493,
+      1 => 1581776735,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e47a4c13d71f3_13935198 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e47ff738774f1_05932148 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row">
@@ -37,10 +37,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 </h5>
                     <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->getShortDesc();?>
 </p>
-                    <form action="product?id=<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
-" method="post">
-                        <input type="submit" class="btn btn-primary" value="Plus d'info..">
-                    </form>
+                    <a href="product?id=<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+"> Plus d'info..</a>
                 </div>
             </div>
         <?php

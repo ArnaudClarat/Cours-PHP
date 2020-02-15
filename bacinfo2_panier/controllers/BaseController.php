@@ -28,7 +28,7 @@ abstract class BaseController
 
     protected function getAssets()
     {
-        return $assets = array('css' => array(), 'js' => array());
+        // return $assets = array('css' => array(), 'js' => array());
     }
 
     protected function getTemplateVars()
