@@ -4,6 +4,7 @@ class Product extends BaseEntity
 {
     protected $id_prod;
     protected $name_prod;
+    protected $id_categ;
     protected $shortDesc_prod;
     protected $longDesc_prod;
     protected $price_prod;
@@ -15,12 +16,14 @@ class Product extends BaseEntity
         'fields' => array(
             'id_prod' => 'id_prod',
             'name_prod' => 'name_prod',
+            'id_categ' => 'id_categ',
             'shortDesc_prod' => 'shortDesc_prod',
             'longDesc_prod' => 'longDesc_prod',
             'price_prod' => 'price_prod',
             'stock_prod' => 'stock_prod'
         )
     );
+
 
     public static function getCategorie($id)
     {
@@ -56,6 +59,11 @@ class Product extends BaseEntity
     public function getName()
     {
         return $this->name_prod;
+    }
+
+    public function getIdCateg()
+    {
+        return $this->id_categ;
     }
 
     public function getShortDesc()
