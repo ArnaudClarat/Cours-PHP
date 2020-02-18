@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-15 14:47:07
+/* Smarty version 3.1.33, created on 2020-02-18 13:51:08
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e48046bb26363_49491114',
+  'unifunc' => 'content_5e4bebcc573e24_85132357',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1581777912,
+      1 => 1582033717,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e48046bb26363_49491114 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4bebcc573e24_85132357 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
  - MonSite</title>
@@ -106,8 +106,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </li>
                             </ul>
 
-                        <form class="form-inline m-auto" role="search" action="search?">
-                <input class="form-control mr-sm-2 ds-input" type="search" placeholder="Search..." aria-label="Search...">
+                        <form class="form-inline m-auto" role="search" action="search?" method="get">
+                <input class="form-control mr-sm-2 ds-input" name="stringSearch" type="search" placeholder="Search..." aria-label="Search...">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
 

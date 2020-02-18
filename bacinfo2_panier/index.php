@@ -19,6 +19,10 @@ switch ($request) {
         $controller = new CategorieController();
         break;
 
+    case (preg_match('/search*/', $request) ? true : false) :
+        $controller = new SearchController();
+        break;
+
     default:
         http_response_code(404);
         echo '404';
