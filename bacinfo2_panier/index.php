@@ -11,15 +11,15 @@ switch ($request) {
         $controller = new HomeController();
         break;
 
-    case (preg_match('/product*/', $request) ? true : false) :
+    case (preg_match('/product\?id=*/', $request) ? true : false) :
         $controller = new ProductController();
         break;
 
-    case (preg_match('/categorie*/', $request) ? true : false) :
+    case (preg_match('/categorie\?id=*/', $request) ? true : false) :
         $controller = new CategorieController();
         break;
 
-    case (preg_match('/search*/', $request) ? true : false) :
+    case (preg_match('/search\?stringSearch*/', $request) ? true : false) :
         $controller = new SearchController();
         break;
 
