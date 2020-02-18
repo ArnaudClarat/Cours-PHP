@@ -21,15 +21,20 @@ class Categorie extends BaseEntity
         $db = DB::getInstance();
         $sql = 'SELECT * FROM t_categories';
         $st = $db->query($sql);
-        return $st->fetchAll(PDO::FETCH_ASSOC);
+        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($arr as $categ)
+        {
+            $categories[] = new self($categ['id_categ']);
+        }
+        return $categories;
     }
 
-    public function getIdCateg()
+    public function getId()
     {
         return $this->id_categ;
     }
 
-    public function getNameCateg()
+    public function getName()
     {
         return $this->name_categ;
     }

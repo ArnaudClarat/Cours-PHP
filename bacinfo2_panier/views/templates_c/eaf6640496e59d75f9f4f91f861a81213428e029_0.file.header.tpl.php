@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 13:51:08
+/* Smarty version 3.1.33, created on 2020-02-18 16:25:04
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4bebcc573e24_85132357',
+  'unifunc' => 'content_5e4c0fe0e52423_92258347',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1582033717,
+      1 => 1582043094,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4bebcc573e24_85132357 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4c0fe0e52423_92258347 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
  - MonSite</title>
@@ -92,8 +92,8 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['categorie']->value) {
 ?>
-                            <a class="dropdown-item" href="categorie?id=<?php echo $_smarty_tpl->tpl_vars['categorie']->value['id_categ'];?>
-"><?php echo $_smarty_tpl->tpl_vars['categorie']->value['name_categ'];?>
+                            <a class="dropdown-item" href="categorie?id=<?php echo $_smarty_tpl->tpl_vars['categorie']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['categorie']->value->getName();?>
 </a>
                         <?php
 }
