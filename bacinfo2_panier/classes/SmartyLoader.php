@@ -14,7 +14,7 @@ class SmartyLoader extends Smarty
         $this->cache_dir = './views/cache/';
     }
 
-    public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title, $categories)
+    public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title = "New page", $categories)
     {
         $assets['css'][]='./views/css/global.css';
         $this->assign(array(
