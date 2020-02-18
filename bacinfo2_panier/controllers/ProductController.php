@@ -7,11 +7,22 @@ class ProductController extends BaseController
         return new Product($i);
     }
 
+    public function getName($i)
+    {
+        $p = new Product($i);
+        return $p->getName();
+    }
+
+    public function getID()
+    {
+        return $_GET['id'];
+    }
+
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'product' => $this->getProduct($_GET['id']),
+            'product' => $this->getProduct($this->getID()),
         );
     }
 
