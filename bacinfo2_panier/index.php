@@ -5,12 +5,13 @@ foreach (glob(__DIR__. '/controllers/*.php') as $filename)
     include_once $filename;
 }
 
-$request = explode('/', $_SERVER['REQUEST_URI'])[2];
+$request = explode('/', $_SERVER['REQUEST_URI'])[2]; // Permet de récuperer la bonne partie de l'url
 switch ($request) {
     case '' :
         $controller = new HomeController();
         break;
 
+    //   Les preg_match() sont du RegEx, l'astérisque est un Wild Card
     case (preg_match('/product\?id=*/', $request) ? true : false) :
         $controller = new ProductController();
         break;
