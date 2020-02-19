@@ -4,15 +4,15 @@ require_once('DB.php');
 
 class Categorie extends BaseEntity
 {
-    protected $id_categ;
-    protected $name_categ;
+    protected $id;
+    protected $name;
 
     public static $definition = array(
         'table' => 't_categories',
         'primary' => 'id_categ',
         'fields' => array(
-            'id_categ' => 'id_categ',
-            'name_categ' => 'name_categ'
+            'id' => 'id_categ',
+            'name' => 'name_categ'
         )
     );
 
@@ -31,12 +31,12 @@ class Categorie extends BaseEntity
 
     public function getId()
     {
-        return $this->id_categ;
+        return $this->id;
     }
 
     public function getName()
     {
-        return $this->name_categ;
+        return $this->name;
     }
 
     public static function getDefinition()
