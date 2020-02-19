@@ -29,7 +29,6 @@
                             <div>
                                 <input class="form-control" type="email" id="email" name="email" required>
                             </div>
-                            <label></label>
                         </fieldset>
                     </div>
                     <div class="col-md-4">
