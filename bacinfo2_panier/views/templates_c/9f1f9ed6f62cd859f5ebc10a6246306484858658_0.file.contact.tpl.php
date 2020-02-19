@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 15:16:07
+/* Smarty version 3.1.33, created on 2020-02-19 15:19:14
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4d513743d427_56787796',
+  'unifunc' => 'content_5e4d51f216a520_39633359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f1f9ed6f62cd859f5ebc10a6246306484858658' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\contact.tpl',
-      1 => 1582125364,
+      1 => 1582125552,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4d513743d427_56787796 (Smarty_Internal_Template $_smarty_tpl) {
-?>contact
-
-
-
-<div class="container">
+function content_5e4d51f216a520_39633359 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
+            <br>
             <form method="post" id="contact" action="">
                 <div>
                     <fieldset class="form-group">
