@@ -1,85 +1,64 @@
-contact
-
-
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="post" id="form" action="">
+            <form method="post" id="contact" action="">
                 <div>
-                    <div>
-                        <label>Name and forename</label>
-                        <dt></dt>
+                    <fieldset class="form-group">
+                        <label>Name and forename :</label>
                         <div>
                             <input type="text">
                             <input type="text">
                         </div>
                         <label></label>
-                    </div>
+                    </fieldset class="form-group">
                 </div>
                 <div>
-                    <div>
-                        <label>Email</label>
-                        <dt></dt>
+                    <fieldset class="form-group">
+                        <label>Email :</label>
                         <div>
                             <input type="email">
                         </div>
                         <label></label>
-                    </div>
+                    </fieldset class="form-group">
                 </div>
                 <div>
-                    <div>
-                        <label>Phone</label>
-                        <dt></dt>
+                    <fieldset class="form-group">
+                        <label>Phone :</label>
                         <div>
                             <input>
                         </div>
                         <label></label>
-                    </div>
+                    </fieldset class="form-group">
                 </div>
                 <div>
-                    <div>
-                        <label>Message subject</label>
-                        <dt></dt>
+                    <fieldset class="form-group">
+                        <label>Message subject :</label>
                         <div>
-                            <div>
-                                <select>
-                                    <option value="Request" data-index="0">Request</option>
-                                    <option value="Proposal" data-index="1">Proposal</option>
-                                    <option value="Suggestion" data-index="2">Suggestion</option>
-                                    <option value="Other" data-index="3">Other</option>
-                                </select>
-                            </div>
+                            <select>
+                                <option value="Request" data-index="0">Request</option>
+                                <option value="Proposal" data-index="1">Proposal</option>
+                                <option value="Suggestion" data-index="2">Suggestion</option>
+                                <option value="Other" data-index="3">Other</option>
+                            </select>
                         </div>
-                        <label></label>
-                    </div>
+                    </fieldset class="form-group">
                 </div>
                 <div>
-                    <div>
-                        <label>Message</label>
-                        <dt></dt>
+                    <fieldset class="form-group">
+                        <label>Message :</label>
                         <div>
                             <textarea rows="4"></textarea>
                         </div>
-                        <div>
-                        <label></label>
-                        </div>
-                    </div>
+                    </fieldset class="form-group">
                 </div>
                 <div>
-                    <button type="submit">
+                    <button type="submit" class="btn btn-primary">
                         <span>Send Message</span>
                     </button>
                 </div>
+                <br>
                 <div>
-                    <div>
-                            <span class="i123-empty-page"></span>
-                    </div>
-                </div>
-                <div>
-                    <div data-role="sensitive-information">
-                        Never submit sensitive information, such as credit card numbers or passwords.
-                    </div>
+                    Never submit sensitive information, such as credit card numbers or passwords.
                 </div>
             </form>
         </div>
