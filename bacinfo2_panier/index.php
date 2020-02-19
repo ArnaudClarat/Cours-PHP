@@ -1,11 +1,18 @@
 <?php
 
+/**
+ * Gestion des dependances
+ * La fonction glob permet de regarder tout ce qui est dans les dossiers
+ */
 foreach (glob(__DIR__. '/controllers/*.php') as $filename)
 {
     include_once $filename;
 }
 
+// separation en tableau de chaîne de charactère et selectionne le 3e éléments
 $request = explode('/', $_SERVER['REQUEST_URI'])[2]; // Permet de récuperer la bonne partie de l'url
+
+/* Routing:  Si c'est vide, on charge la page racine home index.html */ 
 switch ($request) {
     case '' :
         $controller = new HomeController();

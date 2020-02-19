@@ -1,5 +1,7 @@
 RewriteEngine On
-RewriteBase /bacinfo2_panier/ # Nom dossier racine
+# Nom dossier racine
+RewriteBase /bacinfo2_panier/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ index.php [QSA,L] # Nom routage (index.php)
+# Nom routage (index.php)
+RewriteRule ^(.+)$ index.php [QSA,L]
