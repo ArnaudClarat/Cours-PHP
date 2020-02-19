@@ -25,11 +25,11 @@ abstract class BaseEntity
         if ($id !== null)
         {
             $datas = $this->getDatas($id);
-            foreach (static::$definition['fields'] as $field)
+            foreach (static::$definition['fields'] as $var => $field)
             {
                 if (isset($datas[$field]))
                 {
-                    $this->{$field} = $datas[$field];
+                    $this->{$var} = $datas[$field];
                 }
             }
         }
@@ -58,10 +58,16 @@ abstract class BaseEntity
     {
         $db = DB::getInstance();
         $sql = 'SELECT * FROM '.static::$definition['table'];
-        var_dump(static::$definition['table']);
-        var_dump($sql);
         $st = $db->query($sql);
-        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
-        return $arr;
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function search($needle)
+    {
+        $db = DB::getInstance();
+        $sql = 'SELECT * FROM '.static::$definition['table'].' WHERE '.static::$definition['fields']['name'].' like "%'.$needle.'%"';
+        $st = $db->query($sql);
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+
     }
 }

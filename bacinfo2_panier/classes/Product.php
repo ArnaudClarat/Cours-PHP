@@ -24,6 +24,15 @@ class Product extends BaseEntity
         )
     );
 
+    public static function search($needle)
+    {
+        $arr = parent::search($needle);
+        foreach ($arr as $produit)
+        {
+            $produits[] = new self($produit['id_prod']);
+        }
+        return $produits;
+    }
 
     public static function getCategorie($id)
     {
