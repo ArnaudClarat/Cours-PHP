@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 16:25:04
+/* Smarty version 3.1.33, created on 2020-02-19 14:01:46
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4c0fe0e52423_92258347',
+  'unifunc' => 'content_5e4d3fcaad1595_28318323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1582043094,
+      1 => 1582120890,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4c0fe0e52423_92258347 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4d3fcaad1595_28318323 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
  - MonSite</title>
@@ -102,7 +102,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="contact">Contact</a>
                 </li>
                             </ul>
 

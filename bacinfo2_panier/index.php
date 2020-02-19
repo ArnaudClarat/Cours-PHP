@@ -18,6 +18,10 @@ switch ($request) {
         $controller = new HomeController();
         break;
 
+    case 'contact' :
+        $controller = new ContactController();
+        break;
+
     //   Les preg_match() sont du RegEx, l'astérisque est un Wild Card
     case (preg_match('/product\?id=*/', $request) ? true : false) :
         $controller = new ProductController();
