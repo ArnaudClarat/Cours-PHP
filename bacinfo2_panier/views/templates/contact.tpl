@@ -6,55 +6,55 @@
             <form method="post" id="contact" action="">
                 <div>
                     <fieldset class="form-group">
-                        <label>Name and forename :</label>
+                        <label for="nom, prenom">Name and forename :</label>
                         <div>
-                            <input type="text">
-                            <input type="text">
+                            <input type="text" id="nom" name="nom" required>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                    </fieldset class="form-group">
+                </div>
+                <div>
+                    <fieldset class="form-group">
+                        <label for="email">Email :</label>
+                        <div>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <label></label>
                     </fieldset class="form-group">
                 </div>
                 <div>
                     <fieldset class="form-group">
-                        <label>Email :</label>
+                        <label for="phoneNumber">Phone :</label>
                         <div>
-                            <input type="email">
+                            {literal}
+                                <input type="tel" pattern="[0-9]{10}" id="phoneNumber" name="phoneNumber" required>
+                            {/literal}
                         </div>
-                        <label></label>
                     </fieldset class="form-group">
                 </div>
                 <div>
                     <fieldset class="form-group">
-                        <label>Phone :</label>
+                        <label for="subject">Message subject :</label>
                         <div>
-                            <input>
-                        </div>
-                        <label></label>
-                    </fieldset class="form-group">
-                </div>
-                <div>
-                    <fieldset class="form-group">
-                        <label>Message subject :</label>
-                        <div>
-                            <select>
-                                <option value="Request" data-index="0">Request</option>
-                                <option value="Proposal" data-index="1">Proposal</option>
-                                <option value="Suggestion" data-index="2">Suggestion</option>
-                                <option value="Other" data-index="3">Other</option>
+                            <select id="subject" name="subject" required>
+                                <option value="Request">Request</option>
+                                <option value="Proposal">Proposal</option>
+                                <option value="Suggestion">Suggestion</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </fieldset class="form-group">
                 </div>
                 <div>
                     <fieldset class="form-group">
-                        <label>Message :</label>
+                        <label for="message">Message :</label>
                         <div>
-                            <textarea rows="4"></textarea>
+                            <textarea id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
                         </div>
                     </fieldset class="form-group">
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" name="submit">
                         <span>Send Message</span>
                     </button>
                 </div>
