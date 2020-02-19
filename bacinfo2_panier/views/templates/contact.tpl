@@ -62,7 +62,8 @@
                     <fieldset class="form-group">
                         <label for="message">Message :</label>
                         <div>
-                            <textarea class="form-control" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <textarea class="form-control" oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <div id="r"></div>
                         </div>
                     </fieldset class="form-group">
                 </div>

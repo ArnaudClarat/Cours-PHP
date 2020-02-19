@@ -28,7 +28,7 @@ abstract class BaseController
 
     protected function getAssets()
     {
-        return $assets = array('css' => array(), 'js' => array('./views/js/_bootstrap-input-spinner.js'));
+        return $assets = array('css' => array(), 'js' => array('./views/js/_bootstrap-input-spinner.js', './views/js/function.js'));
     }
 
     protected function getTemplateVars()

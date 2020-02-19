@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 18:00:18
+/* Smarty version 3.1.33, created on 2020-02-19 21:13:29
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4d77b2df0608_38770649',
+  'unifunc' => 'content_5e4da4f926b609_59503865',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f1f9ed6f62cd859f5ebc10a6246306484858658' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\contact.tpl',
-      1 => 1582135110,
+      1 => 1582146807,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4d77b2df0608_38770649 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4da4f926b609_59503865 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -52,7 +52,6 @@ function content_5e4d77b2df0608_38770649 (Smarty_Internal_Template $_smarty_tpl)
                             <div>
                                 <input class="form-control" type="email" id="email" name="email" required>
                             </div>
-                            <label></label>
                         </fieldset>
                     </div>
                     <div class="col-md-4">
@@ -86,7 +85,8 @@ function content_5e4d77b2df0608_38770649 (Smarty_Internal_Template $_smarty_tpl)
                     <fieldset class="form-group">
                         <label for="message">Message :</label>
                         <div>
-                            <textarea class="form-control" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <textarea class="form-control" oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <div id="r"></div>
                         </div>
                     </fieldset class="form-group">
                 </div>
