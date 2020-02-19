@@ -5,3 +5,6 @@
     </div>
 </footer>
 <!-- Footer -->
+<script>
+    $("input[type='number']").inputSpinner()
+</script>

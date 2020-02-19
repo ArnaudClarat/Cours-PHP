@@ -15,25 +15,16 @@
                 {$product->getLongDesc()}
             </p>
         </div>
-        <div class="col-md-3 bg-primary">
-            <form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label>{$product->getPrice()}€</label><br>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            Quantité :
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-number-input" class="col-2 col-form-label">Number</label>
-                            <div class="col-4">
-                                <input class="form-control" type="number" value="42" id="example-number-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+
+        <div class="card col-md-3 bg-secondary" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{$product->getPrice()}€</h5>
+                <form class="form-group">
+                    <label for="quantity">Quantité :</label>
+                    <input class="form-control-primary" type="number" value="1" min="1" max="100" step="1" id="quantity" name="quantity"/>
+                </form>
+                <a href="#" class="btn btn-primary" style="width: 213px">Ajouter au panier</a>
+            </div>
         </div>
     </div>
     <div class="row">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 17:50:54
+/* Smarty version 3.1.33, created on 2020-02-19 19:10:19
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4d757e426f22_79579091',
+  'unifunc' => 'content_5e4d881b0cf185_77921211',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '21813387d6b056946b1a845a0bb4831d4c179b61' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\product.tpl',
-      1 => 1582134648,
+      1 => 1582139381,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4d757e426f22_79579091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4d881b0cf185_77921211 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row">
@@ -50,9 +50,9 @@ function content_5e4d757e426f22_79579091 (Smarty_Internal_Template $_smarty_tpl)
 €</h5>
                 <form class="form-group">
                     <label for="quantity">Quantité :</label>
-                    <input class="form-control" type="number" value="1" id="quantity" name="quantity">
+                    <input class="form-control-primary" type="number" value="1" min="1" max="100" step="1" id="quantity" name="quantity"/>
                 </form>
-                <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                <a href="#" class="btn btn-primary" style="width: 213px">Ajouter au panier</a>
             </div>
         </div>
     </div>
