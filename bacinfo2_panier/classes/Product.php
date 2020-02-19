@@ -28,9 +28,10 @@ class Product extends BaseEntity
     public static function getCategorie($id)
     {
         $db = DB::getInstance();
-        $st = $db->query('SELECT id_prod FROM t_products 
-                                    LEFT JOIN t_categories on t_products.id_categ = t_categories.id_categ
-                                    WHERE t_categories.id_categ = '.$id);
+        $sql = 'SELECT id_prod FROM t_products 
+                    LEFT JOIN t_categories on t_products.id_categ = t_categories.id_categ
+                    WHERE t_categories.id_categ = '.$id;
+        $st = $db->query($sql);
         $arr = $st->fetchAll(PDO::FETCH_ASSOC);
         foreach ($arr as $pid)
         {
@@ -41,7 +42,10 @@ class Product extends BaseEntity
 
     public static function getAllProducts()
     {
-        $arr = BaseEntity::getEntities();
+        $db = DB::getInstance();
+        $sql = 'SELECT * FROM '.static::$definition['table'];
+        $st = $db->query($sql);
+        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
         foreach ($arr as $prod)
         {
             $products[] = new self($prod['id_prod']);

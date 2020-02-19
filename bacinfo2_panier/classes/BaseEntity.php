@@ -54,10 +54,13 @@ abstract class BaseEntity
      *
      * @return array => tous les objets
      */
-    public static function getEntities()
+    public function getEntities()
     {
         $db = DB::getInstance();
-        $st = $db->query('SELECT * FROM '.static::$definition['table']);
+        $sql = 'SELECT * FROM '.static::$definition['table'];
+        var_dump(static::$definition['table']);
+        var_dump($sql);
+        $st = $db->query($sql);
         $arr = $st->fetchAll(PDO::FETCH_ASSOC);
         return $arr;
     }

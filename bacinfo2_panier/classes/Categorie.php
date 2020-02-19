@@ -18,7 +18,10 @@ class Categorie extends BaseEntity
 
     public static function getCategories()
     {
-        $arr = BaseEntity::getEntities();
+        $db = DB::getInstance();
+        $sql = 'SELECT * FROM '.static::$definition['table'];
+        $st = $db->query($sql);
+        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
         foreach ($arr as $categ)
         {
             $categories[] = new self($categ['id_categ']);
