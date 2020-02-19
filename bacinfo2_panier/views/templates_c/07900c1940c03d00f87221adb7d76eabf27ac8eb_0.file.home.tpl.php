@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-15 14:25:55
+/* Smarty version 3.1.33, created on 2020-02-18 21:08:45
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e47ff738774f1_05932148',
+  'unifunc' => 'content_5e4c525d0ae871_19336707',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '07900c1940c03d00f87221adb7d76eabf27ac8eb' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\home.tpl',
-      1 => 1581776735,
+      1 => 1582059744,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e47ff738774f1_05932148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4c525d0ae871_19336707 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row">
@@ -38,7 +38,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
                     <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->getShortDesc();?>
 </p>
                     <a href="product?id=<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
-"> Plus d'info..</a>
+">Plus d'info..</a>
                 </div>
             </div>
         <?php

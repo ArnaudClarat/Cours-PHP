@@ -41,14 +41,12 @@ class Product extends BaseEntity
 
     public static function getAllProducts()
     {
-        $db = DB::getInstance();
-        $st = $db->query('SELECT * FROM t_products');
-        $arr = $st->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($arr as $pid)
+        $arr = BaseEntity::getEntities();
+        foreach ($arr as $prod)
         {
-            $produits[] = new self($pid['id_prod']);
+            $products[] = new self($prod['id_prod']);
         }
-        return $produits;
+        return $products;
     }
 
     public function getId()
