@@ -1,6 +1,9 @@
 <div class="container">
     <br>
     <div class="row">
+        <h2>Les résultats pour : "{$needle}"</h2>
+    </div>
+    <div class="row">
         {foreach $products as $product}
             <div class="card col-md-4" style="width: 18rem;">
                 <img src="./views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="...">

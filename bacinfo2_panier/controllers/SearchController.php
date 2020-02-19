@@ -19,6 +19,7 @@ class SearchController extends BaseController
     {
         return array(
             'controller' => $this->name,
+            'needle' => $_GET['stringSearch'],
             'products' => $this->search(),
         );
     }
