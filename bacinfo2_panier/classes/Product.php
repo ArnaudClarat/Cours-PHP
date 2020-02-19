@@ -2,25 +2,25 @@
 
 class Product extends BaseEntity
 {
-    protected $id_prod;
-    protected $name_prod;
+    protected $id;
+    protected $name;
     protected $id_categ;
-    protected $shortDesc_prod;
-    protected $longDesc_prod;
-    protected $price_prod;
-    protected $stock_prod;
+    protected $shortDesc;
+    protected $longDesc;
+    protected $price;
+    protected $stock;
 
     public static $definition = array(
         'table' => 't_products',
         'primary' => 'id_prod',
         'fields' => array(
-            'id_prod' => 'id_prod',
-            'name_prod' => 'name_prod',
+            'id' => 'id_prod',
+            'name' => 'name_prod',
             'id_categ' => 'id_categ',
-            'shortDesc_prod' => 'shortDesc_prod',
-            'longDesc_prod' => 'longDesc_prod',
-            'price_prod' => 'price_prod',
-            'stock_prod' => 'stock_prod'
+            'shortDesc' => 'shortDesc_prod',
+            'longDesc' => 'longDesc_prod',
+            'price' => 'price_prod',
+            'stock' => 'stock_prod'
         )
     );
 
@@ -55,12 +55,12 @@ class Product extends BaseEntity
 
     public function getId()
     {
-        return $this->id_prod;
+        return $this->id;
     }
 
     public function getName()
     {
-        return $this->name_prod;
+        return $this->name;
     }
 
     public function getIdCateg()
@@ -70,22 +70,22 @@ class Product extends BaseEntity
 
     public function getShortDesc()
     {
-        return $this->shortDesc_prod;
+        return $this->shortDesc;
     }
 
     public function getLongDesc()
     {
-        return $this->longDesc_prod;
+        return $this->longDesc;
     }
 
     public function getPrice()
     {
-        return $this->price_prod;
+        return $this->price;
     }
 
     public function getStock()
     {
-        return $this->stock_prod;
+        return $this->stock;
     }
 
 
