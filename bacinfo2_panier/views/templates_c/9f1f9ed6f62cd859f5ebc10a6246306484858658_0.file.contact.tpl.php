@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 16:01:37
+/* Smarty version 3.1.33, created on 2020-02-19 17:49:07
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4d5be1439ca1_12362810',
+  'unifunc' => 'content_5e4d75138f5e02_86949746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f1f9ed6f62cd859f5ebc10a6246306484858658' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\contact.tpl',
-      1 => 1582128091,
+      1 => 1582134543,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4d5be1439ca1_12362810 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4d75138f5e02_86949746 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -53,6 +53,9 @@ function content_5e4d5be1439ca1_12362810 (Smarty_Internal_Template $_smarty_tpl)
                                 <input type="tel" pattern="[0-9]{10}" id="phoneNumber" name="phoneNumber" required>
                             
                         </div>
+                        <small class="form-text text-muted">
+                            Format : 0123456789
+                        </small>
                     </fieldset class="form-group">
                 </div>
                 <div>
