@@ -30,18 +30,14 @@ class ContactController extends BaseController
                 'Content-Disposition: inline'. "\r\n" .
                 'Content-Transfer-Encoding: 7bit'." \r\n" .
                 'X-Mailer:PHP/'.PHP_VERSION;
-        } else
-        {
-            return 1;
         }
-
 
         if (mail($destinataire, $subject, $message, $headers))
         {
             return 2;
         }
 
-
+        return 1;
     }
 
     protected function getTemplateVars()

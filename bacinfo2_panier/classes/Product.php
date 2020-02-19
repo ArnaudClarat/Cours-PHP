@@ -96,19 +96,4 @@ class Product extends BaseEntity
     {
         return $this->stock;
     }
-
-
-    /*
-    public function __construct($id)
-    {
-        parent::__construct($id);
-        foreach ($this->datas as $key => $value)
-        {
-            if (in_array($key, static::$definition, true))
-            {
-                $this->{$key} = $value;
-            }
-        }
-    }
-    */
 }

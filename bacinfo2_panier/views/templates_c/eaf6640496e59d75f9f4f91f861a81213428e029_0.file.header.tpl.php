@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 18:58:04
+/* Smarty version 3.1.33, created on 2020-02-19 22:15:09
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4d853c1a7681_68816991',
+  'unifunc' => 'content_5e4db36d1fbbf3_69327643',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1582138676,
+      1 => 1582150469,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4d853c1a7681_68816991 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4db36d1fbbf3_69327643 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
  - MonSite</title>
@@ -71,7 +71,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php }?>
 </head>
 <div id="header">
-        <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary   ">
+        <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary">
         <a class="navbar-brand" href="./">MonSite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

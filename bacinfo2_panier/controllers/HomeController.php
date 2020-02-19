@@ -3,13 +3,10 @@ require_once('./classes/Product.php');
 
 class HomeController extends BaseController
 {
+    protected $name = 'Home';
 
     public function getDatas($nbr)
     {
-/*        $db = DB::getInstance();
-        $st = $db->query('SELECT id_prod FROM t_products');
-        $st->fetch();
-        var_dump($st);*/
         for ($i = 11; $i <= $nbr+10; $i++) {
             $products[] = new Product($i);
         }
@@ -23,6 +20,4 @@ class HomeController extends BaseController
             'products' => $this->getDatas(10)
         );
     }
-
-    protected $name = 'Home';
 }

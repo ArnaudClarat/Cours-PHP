@@ -1,10 +1,10 @@
 <?php
 require_once('./vendors/smarty/Smarty.class.php');
-define("JS_DIR", "./views/js/");
-define("CSS_DIR", "./views/css/");
+define('JS_DIR', './views/js/');
+define('CSS_DIR', './views/css/');
+
 class SmartyLoader extends Smarty
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -14,7 +14,7 @@ class SmartyLoader extends Smarty
         $this->cache_dir = './views/cache/';
     }
 
-    public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title = "New page", $categories)
+    public function getHeader($assets = array('css' => array(), 'js' => array()), $bootstrap = false, $title = 'New page', $categories)
     {
         $assets['css'][]='./views/css/global.css';
         $this->assign(array(

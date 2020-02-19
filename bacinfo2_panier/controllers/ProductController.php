@@ -2,6 +2,8 @@
 
 class ProductController extends BaseController
 {
+    protected $name = 'product';
+
     public function getProduct($i)
     {
         return new Product($i);
@@ -19,6 +21,4 @@ class ProductController extends BaseController
             'product' => $this->getProduct($this->getID()),
         );
     }
-
-    protected $name = 'product';
 }

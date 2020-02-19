@@ -3,6 +3,8 @@ require_once('./classes/Product.php');
 
 class CategorieController extends BaseController
 {
+    protected $name = 'categorie';
+
     protected function getProducts($id)
     {
         return Product::getCategorie($id);
@@ -15,6 +17,4 @@ class CategorieController extends BaseController
             'products'=> $this->getProducts($_GET['id']),
         );
     }
-
-    protected $name = 'categorie';
 }
