@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-15 07:56:50
+/* Smarty version 3.1.33, created on 2020-02-19 17:50:54
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e47a4428683b8_25313600',
+  'unifunc' => 'content_5e4d757e426f22_79579091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '21813387d6b056946b1a845a0bb4831d4c179b61' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\product.tpl',
-      1 => 1581628329,
+      1 => 1582134648,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e47a4428683b8_25313600 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4d757e426f22_79579091 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row">
@@ -43,26 +43,17 @@ function content_5e47a4428683b8_25313600 (Smarty_Internal_Template $_smarty_tpl)
 
             </p>
         </div>
-        <div class="col-md-3 bg-primary">
-            <form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label><?php echo $_smarty_tpl->tpl_vars['product']->value->getPrice();?>
-€</label><br>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            Quantité :
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-number-input" class="col-2 col-form-label">Number</label>
-                            <div class="col-4">
-                                <input class="form-control" type="number" value="42" id="example-number-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+
+        <div class="card col-md-3 bg-secondary" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->getPrice();?>
+€</h5>
+                <form class="form-group">
+                    <label for="quantity">Quantité :</label>
+                    <input class="form-control" type="number" value="1" id="quantity" name="quantity">
+                </form>
+                <a href="#" class="btn btn-primary">Ajouter au panier</a>
+            </div>
         </div>
     </div>
     <div class="row">

@@ -39,6 +39,9 @@
                                 {literal}
                                     <input class="form-control" type="tel" pattern="[0-9]{10}" id="phoneNumber" name="phoneNumber" required>
                                 {/literal}
+                                <small class="form-text text-muted">
+                                    Format : 0123456789
+                                </small>
                             </div>
                         </fieldset>
                     </div>
