@@ -88,4 +88,3 @@
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
 </div>
-{$smarty.session|var_dump}
