@@ -32,10 +32,10 @@
     {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
     <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary text-dark">
         <a class="navbar-brand btn" href="./">MonSite</a>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             {*Gauche*}
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link btn" href="./">Accueil<span class="sr-only">(current)</span></a>
                 </li>
@@ -55,9 +55,11 @@
             </ul>
 
             {*Centré*}
-            <form class="form-inline m-auto" role="search" action="search?" method="get">
-                <input class="form-control mr-sm-2 ds-input" name="stringSearch" type="search" placeholder="Search..." aria-label="Search...">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline m-auto input-group" style="max-width: 25%" role="search" action="search?" method="get">
+                <input class="form-control ds-input" name="stringSearch" type="search" placeholder="Search..." aria-label="Search...">
+                <div class="input-group-append">
+                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                </div>
             </form>
 
             {*Droite*}
