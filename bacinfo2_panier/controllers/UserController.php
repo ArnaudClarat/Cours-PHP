@@ -3,6 +3,8 @@
 
 class UserController extends BaseController
 {
+    protected $name = 'user';
+
     protected function connect()
     {
         if
