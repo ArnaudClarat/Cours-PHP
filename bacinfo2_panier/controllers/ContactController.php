@@ -21,16 +21,13 @@ class ContactController extends BaseController
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
-        if (($nom !== '') && ($email !== '') && ($subject !== '') && ($message !== ''))
-        {
-            $headers  = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'From:'.$nom.' '.$prenom.' <'.$email.'>' . "\r\n" .
-                'Reply-To:'.$email. "\r\n" .
-                'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
-                'Content-Disposition: inline'. "\r\n" .
-                'Content-Transfer-Encoding: 7bit'." \r\n" .
-                'X-Mailer:PHP/'.PHP_VERSION;
-        }
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'From:'.$nom.' '.$prenom.' <'.$email.'>' . "\r\n" .
+            'Reply-To:'.$email. "\r\n" .
+            'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
+            'Content-Disposition: inline'. "\r\n" .
+            'Content-Transfer-Encoding: 7bit'." \r\n" .
+            'X-Mailer:PHP/'.PHP_VERSION;
 
         if (mail($destinataire, $subject, $message, $headers))
         {
