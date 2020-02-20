@@ -4,7 +4,7 @@
             <br>
             <br>
             <form method="post" id="contact" action="">
-                <div class="row">
+                <div class="form-row">
                     <div class="col-md-6">
                         <fieldset class="form-group">
                             <label for="nom">Name :</label>
@@ -22,7 +22,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="row">
+                <div class="form-row">
                     <div class="col-md-8">
                         <fieldset class="form-group">
                             <label for="email">Email :</label>
@@ -45,7 +45,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div>
+                <div class="form-row">
                     <fieldset class="form-group">
                         <label for="subject">Message subject :</label>
                         <div>
@@ -58,11 +58,11 @@
                         </div>
                     </fieldset class="form-group">
                 </div>
-                <div>
+                <div class="form-row">
                     <fieldset class="form-group">
                         <label for="message">Message :</label>
                         <div>
-                            <textarea class="form-control" oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <textarea oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
                             <div id="r"></div>
                         </div>
                     </fieldset class="form-group">

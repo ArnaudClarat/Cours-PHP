@@ -1,4 +1,3 @@
-{session_start()}
 <head>
     <title>{$title} - MonSite</title>
     <meta charset="UTF-8">
@@ -75,10 +74,10 @@
                     <i class="fas fa-shopping-cart"></i>
                 </button>
             </form>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Connection</button>
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Créer un compte</button>
-            </form>
+            <div class="form-inline my-2 my-lg-0">
+                <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="user">Connection</a>
+                <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="#">Créer un compte</a>
+            </div>
         </div>
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
