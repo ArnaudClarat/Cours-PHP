@@ -1,3 +1,4 @@
+{session_start()}
 <head>
     <title>{$title} - MonSite</title>
     <meta charset="UTF-8">
