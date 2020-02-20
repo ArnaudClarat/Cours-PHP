@@ -84,6 +84,19 @@ INSERT INTO `t_categories` (name_categ) VALUES
 ('Spécial');
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table t_users
+--
+
+DROP TABLE IF EXISTS `t_users` ;
+CREATE TABLE IF NOT EXISTS `t_users` (
+    `id_user` int(11) NOT NULL AUTO_INCREMENT,
+    `name_user` varchar(250) NOT NULL,
+    `passwd_user` varchar(250) NOT NULL,
+    PRIMARY KEY (`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
