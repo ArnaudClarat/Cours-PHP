@@ -11,7 +11,6 @@ class UserController extends BaseController
         {
             if (User::connect($_POST['pseudo'],$_POST['passwd']))
             {
-                $_SESSION['pseudo'] = $_POST['pseudo'];
                 return true;
             }
         }

@@ -116,7 +116,35 @@ COMMIT;
 DROP TABLE IF EXISTS `t_carts` ;
 CREATE TABLE IF NOT EXISTS `t_carts` (
     `id_cart` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (`id_cart`)
+    `id_user` int(11) NOT NULL,
+    PRIMARY KEY (`id_cart`),
+    FOREIGN KEY (`id_user`) REFERENCES t_users(`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement de la table t_carts
+--
+
+INSERT into `t_carts` (id_user) VALUES
+('11'),
+('12');
+COMMIT;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table carts_products
+--
+
+DROP TABLE IF EXISTS `carts_products` ;
+CREATE TABLE IF NOT EXISTS `carts_products` (
+    `id_cart_product` int(11) NOT NULL AUTO_INCREMENT,
+    `id_cart` int(11) NOT NULL,
+    `id_prod` int(11) NOT NULL,
+    `quantity_prod` int(11) NOT NULL,
+    PRIMARY KEY (`id_cart_product`),
+    FOREIGN KEY (`id_cart`) REFERENCES t_carts(`id_cart`),
+    FOREIGN KEY (`id_prod`) REFERENCES t_products(`id_prod`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

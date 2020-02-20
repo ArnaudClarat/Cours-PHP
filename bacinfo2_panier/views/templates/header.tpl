@@ -64,11 +64,11 @@
 
             {*Droite*}
             <div class="btn-group" role="group">
-                <a class="btn border-dark" href="#">
+                <a class="btn border-dark" href="cart">
                     <img src="./views/img/panier_logo.png" alt="panier" style="max-width: 24px">
                 </a>
-                {if isset($smarty.session.pseudo)}
-                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="deco">Déconnection</a>
+                {if isset($smarty.session.user)}
+                    <a class="btn border-dark text-dark btn-secondary my-2 my-sm-0" href="deco">Déconnection</a>
                 {else}
                     <a class="btn border-dark text-dark my-2 my-sm-0" href="user">Connection</a>
                     <a class="btn border-dark text-dark my-2 my-sm-0" href="#">Créer un compte</a>

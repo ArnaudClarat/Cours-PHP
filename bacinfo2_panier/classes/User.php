@@ -21,12 +21,17 @@ class User extends BaseEntity
     {
         $db = DB::getInstance();
         $sql = 'SELECT * FROM `t_users` WHERE `name_user` = "'.$name.'" AND `passwd_user` = "'.$passwd.'"';
-        $arr = $db->query($sql)->rowCount();
-        var_dump($arr);
-        if ($arr !== 0)
+        $arr = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        if (isset($arr['id_user']))
         {
+            $_SESSION['user'] = new User($arr['id_user']);
             return true;
         }
         return false;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 }

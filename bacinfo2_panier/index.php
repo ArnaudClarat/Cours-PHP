@@ -1,14 +1,21 @@
 <?php
-session_start();
+
 
 /**
- * Gestion des dependances
+ * Gestion des dependances = Evite de devoir mettre des require_once
  * La fonction glob permet de regarder tout ce qui est dans les dossiers
  */
 foreach (glob(__DIR__. '/controllers/*.php') as $filename)
 {
     include_once $filename;
 }
+
+foreach (glob(__DIR__. '/classes/*.php') as $filename)
+{
+    include_once $filename;
+}
+
+session_start();
 
 // separation en tableau de chaîne de charactère et selectionne le 3e éléments
 $request = explode('/', $_SERVER['REQUEST_URI'])[2]; // Permet de récuperer la bonne partie de l'url
@@ -30,6 +37,10 @@ switch ($request) {
     case 'deco' :
         $_SESSION = array();
         $controller = new UserController();
+        break;
+
+    case 'cart' :
+        $controller = new CartController();
         break;
 
     //   Les preg_match() sont du RegEx, l'astérisque est un Wild Card

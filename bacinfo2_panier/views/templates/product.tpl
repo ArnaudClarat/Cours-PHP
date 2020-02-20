@@ -19,11 +19,12 @@
         <div class="card col-md-3 bg-secondary" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{$product->getPrice()}€</h5>
-                <form class="form-group">
+                <form class="form-group" action="cart" method="post">
                     <label for="quantity">Quantité :</label>
                     <input class="form-control-primary" type="number" value="1" min="1" max="100" step="1" id="quantity" name="quantity"/>
+                    <input type="hidden" id="id" name="id" value="{$product->getId()}">
+                    <button type="submit" id="submit" name="submit" class="btn btn-primary mt-2" style="width: 213px">Ajouter au panier</button>
                 </form>
-                <a href="#" class="btn btn-primary" style="width: 213px">Ajouter au panier</a>
             </div>
         </div>
     </div>
