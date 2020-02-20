@@ -30,36 +30,28 @@
 </head>
 <div id="header">
     {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
-    <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary">
-        <a class="navbar-brand" href="./">MonSite</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-sm navbar-secondary bg-secondary text-dark">
+        <a class="navbar-brand btn" href="./">MonSite</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {*Gauche*}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link btn" href="./">Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Catégories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {foreach $categories as $categorie}
-                            <a class="dropdown-item" href="categorie?id={$categorie->getId()}">{$categorie->getName()}</a>
+                            <a class="dropdown-item btn" href="categorie?id={$categorie->getId()}">{$categorie->getName()}</a>
                         {/foreach}
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact">Contact</a>
+                    <a class="nav-link btn" href="contact">Contact</a>
                 </li>
-                {* DISABLE NAV LINK
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-                *}
             </ul>
 
             {*Centré*}
@@ -69,21 +61,17 @@
             </form>
 
             {*Droite*}
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn border-dark" style="font-size: 1.4em">
-                    <i class="fas fa-shopping-cart"></i>
-                </button>
-            </form>
-            {if isset($smarty.session.pseudo)}
-                <div class="form-inline my-2 my-lg-0">
+            <div class="btn-group" role="group">
+                <a class="btn border-dark" href="#">
+                    <img src="./views/img/panier_logo.png" alt="panier" style="max-width: 24px">
+                </a>
+                {if isset($smarty.session.pseudo)}
                     <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="deco">Déconnection</a>
-                </div>
-            {else}
-                <div class="form-inline my-2 my-lg-0">
-                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="user">Connection</a>
-                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="#">Créer un compte</a>
-                </div>
-            {/if}
+                {else}
+                    <a class="btn border-dark text-dark my-2 my-sm-0" href="user">Connection</a>
+                    <a class="btn border-dark text-dark my-2 my-sm-0" href="#">Créer un compte</a>
+                {/if}
+            </div>
         </div>
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
