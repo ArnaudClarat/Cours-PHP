@@ -26,6 +26,7 @@ class Product extends BaseEntity
 
     public static function search($needle)
     {
+        $produits = array();
         $arr = parent::search($needle);
         foreach ($arr as $produit)
         {
