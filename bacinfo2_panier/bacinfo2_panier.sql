@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `t_categories` (
 -- Déchargement des données de la table `t_categorie`
 --
 
-INSERT INTO `t_categories` (name_categ) VALUES
+INSERT into `t_categories` (name_categ) VALUES
 ('Savons'),
 ('Crème et Lotion'),
 ('Alcools'),
@@ -97,6 +97,15 @@ CREATE TABLE IF NOT EXISTS `t_users` (
     `passwd_user` varchar(250) NOT NULL,
     PRIMARY KEY (`id_user`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_users`
+--
+
+INSERT into `t_users` (`name_user`, `passwd_user`) VALUES
+('Arnaud', 'Toxiko8'),
+('Ginette', '1234');
+COMMIT;
 
 -- --------------------------------------------------------
 

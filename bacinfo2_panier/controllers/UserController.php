@@ -1,5 +1,5 @@
 <?php
-
+require_once('./classes/User.php');
 
 class UserController extends BaseController
 {
@@ -7,16 +7,22 @@ class UserController extends BaseController
 
     protected function connect()
     {
-        if
-        $_POST
-        return User::connect();
+        if (isset($_POST['submit']))
+        {
+            if (User::connect($_POST['pseudo'],$_POST['passwd']))
+            {
+                $_SESSION['pseudo'] = $_POST['pseudo'];
+                return true;
+            }
+        }
+        return false;
     }
 
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'user'=> $this->getProducts($_GET['id']),
+            'user'=> $this->connect()
         );
     }
 }

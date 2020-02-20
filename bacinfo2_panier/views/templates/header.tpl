@@ -74,11 +74,18 @@
                     <i class="fas fa-shopping-cart"></i>
                 </button>
             </form>
-            <div class="form-inline my-2 my-lg-0">
-                <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="user">Connection</a>
-                <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="#">Créer un compte</a>
-            </div>
+            {if isset($smarty.session.pseudo)}
+                <div class="form-inline my-2 my-lg-0">
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="deco">Déconnection</a>
+                </div>
+            {else}
+                <div class="form-inline my-2 my-lg-0">
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="user">Connection</a>
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="#">Créer un compte</a>
+                </div>
+            {/if}
         </div>
     </nav>
     {* END - HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
 </div>
+{$smarty.session|var_dump}

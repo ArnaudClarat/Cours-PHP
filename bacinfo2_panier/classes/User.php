@@ -7,7 +7,7 @@ class User extends BaseEntity
     protected $name;
     protected $passwd;
 
-    protected static $definition = array(
+    public static $definition = array(
         'table' => 't_users',
         'primary' => 'id_user',
         'fields' => array(
@@ -17,13 +17,16 @@ class User extends BaseEntity
         )
     );
 
-    protected static function connect($name, $passwd)
+    public static function connect($name, $passwd)
     {
         $db = DB::getInstance();
-        $sql = 'SELECT * FROM `t_users` WHERE name_user = '.$name;
-        $arr = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        $sql = 'SELECT * FROM `t_users` WHERE `name_user` = "'.$name.'" AND `passwd_user` = "'.$passwd.'"';
+        $arr = $db->query($sql)->rowCount();
         var_dump($arr);
-        $user = new self();
-
+        if ($arr !== 0)
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-20 08:54:25
+/* Smarty version 3.1.33, created on 2020-02-20 14:54:29
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4e4941ae6ff7_87158638',
+  'unifunc' => 'content_5e4e9da539ef14_29546441',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eaf6640496e59d75f9f4f91f861a81213428e029' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\header.tpl',
-      1 => 1582151485,
+      1 => 1582210403,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4e4941ae6ff7_87158638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e9da539ef14_29546441 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
  - MonSite</title>
@@ -116,11 +116,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <i class="fas fa-shopping-cart"></i>
                 </button>
             </form>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Connection</button>
-                <button class="btn border-light text-light btn-secondary my-2 my-sm-0" type="submit">Créer un compte</button>
-            </form>
+            <?php if (isset($_SESSION['pseudo'])) {?>
+                <div class="form-inline my-2 my-lg-0">
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="deco">Déconnection</a>
+                </div>
+            <?php } else { ?>
+                <div class="form-inline my-2 my-lg-0">
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="user">Connection</a>
+                    <a class="btn border-light text-light btn-secondary my-2 my-sm-0" href="#">Créer un compte</a>
+                </div>
+            <?php }?>
         </div>
     </nav>
-    </div><?php }
+    </div>
+<?php echo var_dump($_SESSION);
+}
 }

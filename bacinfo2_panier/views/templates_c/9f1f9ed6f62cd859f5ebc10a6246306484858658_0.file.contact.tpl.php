@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 21:13:29
+/* Smarty version 3.1.33, created on 2020-02-20 13:34:51
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4da4f926b609_59503865',
+  'unifunc' => 'content_5e4e8afb890e29_59635725',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f1f9ed6f62cd859f5ebc10a6246306484858658' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\contact.tpl',
-      1 => 1582146807,
+      1 => 1582205689,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4da4f926b609_59503865 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e8afb890e29_59635725 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <br>
             <br>
             <form method="post" id="contact" action="">
-                <div class="row">
+                <div class="form-row">
                     <div class="col-md-6">
                         <fieldset class="form-group">
                             <label for="nom">Name :</label>
@@ -45,7 +45,7 @@ function content_5e4da4f926b609_59503865 (Smarty_Internal_Template $_smarty_tpl)
                         </fieldset>
                     </div>
                 </div>
-                <div class="row">
+                <div class="form-row">
                     <div class="col-md-8">
                         <fieldset class="form-group">
                             <label for="email">Email :</label>
@@ -68,7 +68,7 @@ function content_5e4da4f926b609_59503865 (Smarty_Internal_Template $_smarty_tpl)
                         </fieldset>
                     </div>
                 </div>
-                <div>
+                <div class="form-row">
                     <fieldset class="form-group">
                         <label for="subject">Message subject :</label>
                         <div>
@@ -81,11 +81,11 @@ function content_5e4da4f926b609_59503865 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                     </fieldset class="form-group">
                 </div>
-                <div>
+                <div class="form-row">
                     <fieldset class="form-group">
                         <label for="message">Message :</label>
                         <div>
-                            <textarea class="form-control" oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
+                            <textarea oninput="count()" id="message" name="message" minlength="10" maxlength="150" class="form-control" rows="4" required></textarea>
                             <div id="r"></div>
                         </div>
                     </fieldset class="form-group">

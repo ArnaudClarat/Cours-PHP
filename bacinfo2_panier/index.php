@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /**
  * Gestion des dependances
@@ -22,6 +23,15 @@ switch ($request) {
         $controller = new ContactController();
         break;
 
+    case 'user' :
+        $controller = new UserController();
+        break;
+
+    case 'deco' :
+        $_SESSION = array();
+        $controller = new UserController();
+        break;
+
     //   Les preg_match() sont du RegEx, l'astérisque est un Wild Card
     case (preg_match('/product\?id=*/', $request) ? true : false) :
         $controller = new ProductController();
@@ -38,5 +48,6 @@ switch ($request) {
     default:
         http_response_code(404);
         echo '404';
+        // TODO creer 404.tpl
         break;
 }
