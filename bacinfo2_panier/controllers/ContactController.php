@@ -17,19 +17,14 @@ class ContactController extends BaseController
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $email = $_POST['email'];
-        $phoneNumber = $_POST['phoneNumber'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
+        $email_message = "Form details below.\n\n";
+        $email_message .= 'First Name: '.$nom."\n";
+        $email_message .= 'Last Name: '.$prenom."\n";
+        $email_message .= 'Email: '.$email."\n";
+        $email_message .= 'Telephone: '.$_POST['phoneNumber']."\n";
+        $email_message .= 'Message: '.$_POST['message']."\n";
 
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'From:'.$nom.' '.$prenom.' <'.$email.'>' . "\r\n" .
-            'Reply-To:'.$email. "\r\n" .
-            'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
-            'Content-Disposition: inline'. "\r\n" .
-            'Content-Transfer-Encoding: 7bit'." \r\n" .
-            'X-Mailer:PHP/'.PHP_VERSION;
-
-        if (mail($destinataire, $subject, $message, $headers))
+        if (mail($destinataire, $_POST['subject'], $email_message))
         {
             return 2;
         }
