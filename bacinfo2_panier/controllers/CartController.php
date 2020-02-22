@@ -12,15 +12,26 @@ class CartController extends BaseController
         if (!isset($_POST['submit'])) {
             return 1;
         }
-        Cart::addProducts($_POST['id'], $_POST['quantity']);
-        return 2;
+        if (Cart::addProducts($_POST['id'], $_POST['quantity']) === 1)
+        {
+            return 2;
+        }
+        else {
+            return 3;
+        }
+    }
+
+    protected function getPanier()
+    {
+        return new Cart($_SESSION['user']->getId());
     }
 
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'newProduct' => $this->addProduct()
+            'newProduct' => $this->addProduct(),
+            'panier' => $this->getPanier()
         );
     }
 

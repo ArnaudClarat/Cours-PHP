@@ -26,7 +26,7 @@
         const config = {
             decrementButton: "<strong>-</strong>", // button text
             incrementButton: "<strong>+</strong>", // ..
-            groupClass: "test", // css class of the resulting input-group
+            groupClass: "test quantity", // css class of the resulting input-group
             buttonsClass: "btn-primary",
             buttonsWidth: "2.5rem",
             textAlign: "center",
@@ -41,7 +41,7 @@
 
         const html = '<div class="input-group ' + config.groupClass + '" style="border: black solid 1px; border-radius: .25rem">' +
 
-            '<div class="input-group-prepend">' +
+            '<div oninput="sum()" class="input-group-prepend">' +
             '<button style="min-width: ' + config.buttonsWidth + '" class="btn btn-decrement ' + config.buttonsClass + '" type="button">' + config.decrementButton + '</button>' +
             '</div>' +
             '<input type="text" inputmode="decimal" style="text-align: ' + config.textAlign + '" class="form-control"/>' +
