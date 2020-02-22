@@ -3,5 +3,6 @@ function count() {
 }
 
 function sum() {
-    document.getElementById('sum').innerText = document.getElementsByClassName('quantity')*document.getElementsByClassName('price');
+    let id = getElementById('')
+    document.getElementById('sumspan').innerText = parseInt(document.getElementById('quantity')) * parseInt(document.getElementById('price'));
 }

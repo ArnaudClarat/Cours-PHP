@@ -1,12 +1,17 @@
 <?php
-require_once('BaseEntity.php');
-require_once('DB.php');
 
 class Categorie extends BaseEntity
 {
+    /**
+     * @var $id => id de la catégorie
+     * @var $name => nom de la catégorie
+     */
     protected $id;
     protected $name;
 
+    /**
+     * @var array => schémas de l'entité
+     */
     public static $definition = array(
         'table' => 't_categories',
         'primary' => 'id_categ',
@@ -16,6 +21,9 @@ class Categorie extends BaseEntity
         )
     );
 
+    /**
+     * @return array contenant toutes les Categories
+     */
     public static function getCategories()
     {
         $db = DB::getInstance();
@@ -29,11 +37,17 @@ class Categorie extends BaseEntity
         return $categories;
     }
 
+    /**
+     * @return int => id de la Categorie
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return string => nom de la Categorie
+     */
     public function getName()
     {
         return $this->name;

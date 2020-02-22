@@ -8,7 +8,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Reference</th>
+                    <th scope="col">Référence</th>
                     <th scope="col">Désignation</th>
                     <th scope="col">Prix</th>
                     <th scope="col">Quantité</th>
@@ -19,13 +19,13 @@
             {foreach $panier->getArr() as $product}
                 {$product|var_dump}
                 <tr>
-                    <th scope="row">{$product[0]->getId()}</th>
+                    <th data-id={$product->getId()}  scope="row">{$product[0]->getId()}</th>
                     <td>{$product[0]->getName()}</td>
-                    <td class="price">{$product[0]->getPrice()}€</td>
+                    <td id="price{$product[0]->getId()}">{$product[0]->getPrice()}€</td>
                     <td>
-                        <input class="form-control-primary quantity" type="number" value="{$product[1][0]}" min="1" max="100" step="1" name="quantity"/>
+                        <input class="form-control-primary" type="number" value="{$product[1][0]}" min="1" max="100" step="1" name="quantity"/>
                     </td>
-                    <td><span id="sum"></span>€</td>
+                    <td><span id="sumspan"></span>€</td>
                 </tr>
             {/foreach}
             </tbody>

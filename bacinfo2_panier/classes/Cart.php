@@ -1,6 +1,5 @@
 <?php
 
-
 class Cart extends BaseEntity
 {
     /**
@@ -13,9 +12,7 @@ class Cart extends BaseEntity
     protected $products = array();
 
     /**
-     * Contient le schémas de l'entité
-     *
-     * @var array
+     * @var array => schémas de l'entité
      */
     public static $definition = array(
         'table' => 't_carts',
