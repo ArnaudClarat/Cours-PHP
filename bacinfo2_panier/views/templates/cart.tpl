@@ -19,7 +19,7 @@
             {foreach $panier->getArr() as $product}
                 {$product|var_dump}
                 <tr>
-                    <th data-id={$product->getId()}  scope="row">{$product[0]->getId()}</th>
+                    <th data-id={$product[0]->getId()}  scope="row">{$product[0]->getId()}</th>
                     <td>{$product[0]->getName()}</td>
                     <td id="price{$product[0]->getId()}">{$product[0]->getPrice()}€</td>
                     <td>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-22 10:17:47
+/* Smarty version 3.1.33, created on 2020-02-22 15:25:27
   from 'C:\wamp64\www\bacinfo2_panier\views\templates\cart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e50ffcb013dd8_93564368',
+  'unifunc' => 'content_5e5147e7bba9d2_90986029',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a18f81c5078a1a4205bc813da79739aafc8a73fe' => 
     array (
       0 => 'C:\\wamp64\\www\\bacinfo2_panier\\views\\templates\\cart.tpl',
-      1 => 1582366664,
+      1 => 1582385120,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e50ffcb013dd8_93564368 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5147e7bba9d2_90986029 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <?php if ($_smarty_tpl->tpl_vars['newProduct']->value === 0) {?>
         <br>
@@ -31,7 +31,7 @@ function content_5e50ffcb013dd8_93564368 (Smarty_Internal_Template $_smarty_tpl)
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Reference</th>
+                    <th scope="col">Référence</th>
                     <th scope="col">Désignation</th>
                     <th scope="col">Prix</th>
                     <th scope="col">Quantité</th>
@@ -47,17 +47,19 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
                 <?php echo var_dump($_smarty_tpl->tpl_vars['product']->value);?>
 
                 <tr>
-                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getId();?>
+                    <th data-id=<?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getId();?>
+  scope="row"><?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getId();?>
 </th>
                     <td><?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getName();?>
 </td>
-                    <td class="price"><?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getPrice();?>
+                    <td id="price<?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['product']->value[0]->getPrice();?>
 €</td>
                     <td>
-                        <input class="form-control-primary quantity" type="number" value="<?php echo $_smarty_tpl->tpl_vars['product']->value[1][0];?>
+                        <input class="form-control-primary" type="number" value="<?php echo $_smarty_tpl->tpl_vars['product']->value[1][0];?>
 " min="1" max="100" step="1" name="quantity"/>
                     </td>
-                    <td><span id="sum"></span>€</td>
+                    <td><span id="sumspan"></span>€</td>
                 </tr>
             <?php
 }
