@@ -3,10 +3,20 @@
 
 class Cart extends BaseEntity
 {
+    /**
+     * @var $id => id du panier
+     * @var $id_user => id de l'user
+     * @var array $products => ensemble des produits
+     */
     protected $id;
     protected $id_user;
-    protected $arr = array();
+    protected $products = array();
 
+    /**
+     * Contient le schémas de l'entité
+     *
+     * @var array
+     */
     public static $definition = array(
         'table' => 't_carts',
         'primary' => 'id_cart',
@@ -16,6 +26,10 @@ class Cart extends BaseEntity
         )
     );
 
+    /**
+     * Cart constructor.
+     * @param null $id du panier
+     */
     public function __construct($id = null)
     {
         parent::__construct($id);
@@ -29,7 +43,7 @@ class Cart extends BaseEntity
             $produit = array();
             $produit[] = new Product($product['id_prod']);
             $produit[] = $product['quantity_prod'];
-            $this->arr[] = $produit;
+            $this->products[] = $produit;
         }
     }
 
@@ -38,9 +52,16 @@ class Cart extends BaseEntity
      */
     public function getArr()
     {
-        return $this->arr;
+        return $this->products;
     }
 
+    /**
+     * Ajoute le produit dans la DB
+     *
+     * @param $product => id du produit
+     * @param $nbr => Quantité du produit
+     * @return false|int => Erreur requete/nombre de ligne modifiée (Doit être égal à 1)
+     */
     public static function addProducts($product, $nbr)
     {
         $db = DB::getInstance();
@@ -57,7 +78,6 @@ class Cart extends BaseEntity
             $newQuantity = $arr[0]['quantity_prod'] + $nbr;
             $sql = 'UPDATE `carts_products` SET `quantity_prod` = '.$newQuantity.$condition;
         }
-
         return $db->exec($sql);
     }
 }

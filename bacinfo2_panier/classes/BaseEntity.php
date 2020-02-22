@@ -38,7 +38,7 @@ abstract class BaseEntity
     /**
      *  Recupère les données dans la DB
      *
-     * @param $id de l'entité
+     * @param int $id de l'entité
      * @return array => les données
      */
     public function getDatas($id)
@@ -62,12 +62,17 @@ abstract class BaseEntity
         return $st->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * Recherche l'(les) entité(s) sur leur nom
+     *
+     * @param string $needle => String de recherche
+     * @return array => Tableau associatif
+     */
     public static function search($needle)
     {
         $db = DB::getInstance();
         $sql = 'SELECT * FROM '.static::$definition['table'].' WHERE '.static::$definition['fields']['name'].' like "%'.$needle.'%"';
         $st = $db->query($sql);
         return $st->fetchAll(PDO::FETCH_ASSOC);
-
     }
 }
