@@ -22,7 +22,9 @@ class Categorie extends BaseEntity
     );
 
     /**
-     * @return array contenant toutes les Categories
+     * retourne toutes les Categories
+     *
+     * @return array
      */
     public static function getCategories()
     {
@@ -53,11 +55,17 @@ class Categorie extends BaseEntity
         return $this->name;
     }
 
+    /**
+     * @return array => schémas de l'entité
+     */
     public static function getDefinition()
     {
         return self::$definition;
     }
 
+    /**
+     * @return array => Ensemble des tables dans la DB
+     */
     public static function getFields()
     {
         return self::$definition['fields'];

@@ -12,7 +12,7 @@ class Cart extends BaseEntity
     protected $products = array();
 
     /**
-     * @var array => schémas de l'entité
+     * @var array => schéma d'un panier
      */
     public static $definition = array(
         'table' => 't_carts',

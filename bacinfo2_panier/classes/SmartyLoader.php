@@ -14,6 +14,15 @@ class SmartyLoader extends Smarty
         $this->cache_dir = './views/cache/';
     }
 
+    /**
+     * Affiche le header
+     *
+     * @param array $assets => Ensemble des css et js
+     * @param bool $bootstrap => Les librairies Bootstrap
+     * @param string $title => Titre de la page
+     * @param array $categories => Tableau de Categorie
+     * @throws SmartyException
+     */
     public function getHeader($assets = array('css' => array(), 'js' => array()), $bootstrap = false, $title = 'New page', $categories)
     {
         $assets['css'][]='./views/css/global.css';
@@ -26,6 +35,11 @@ class SmartyLoader extends Smarty
         $this->display('header.tpl');
     }
 
+    /**
+     * Affiche le footer
+     *
+     * @throws SmartyException
+     */
     public function getFooter()
     {
         $this->assign(array(

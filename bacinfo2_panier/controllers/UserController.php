@@ -3,8 +3,16 @@ require_once('./classes/User.php');
 
 class UserController extends BaseController
 {
+    /**
+     * @var string => Nom de la page
+     */
     protected $name = 'user';
 
+    /**
+     * Tente de connecter l'utilisateur
+     *
+     * @return bool
+     */
     protected function connect()
     {
         if (isset($_POST['submit']))
@@ -17,6 +25,12 @@ class UserController extends BaseController
         return false;
     }
 
+    /**
+     * Renvoie un tableau au template
+     * chaque entrée est une variable dans le template
+     *
+     * @return array
+     */
     protected function getTemplateVars()
     {
         return array(

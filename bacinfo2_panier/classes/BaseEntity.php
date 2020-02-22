@@ -10,9 +10,7 @@
 abstract class BaseEntity
 {
     /**
-     * Contient le schémas de l'entité
-     *
-     * @var array
+     * @var array => schémas de l'entité
      */
     public static $definition;
 
@@ -63,7 +61,7 @@ abstract class BaseEntity
     }
 
     /**
-     * Recherche l'(les) entité(s) sur leur nom
+     * Recherche les entités sur leur nom
      *
      * @param string $needle => String de recherche
      * @return array => Tableau associatif

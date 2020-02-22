@@ -2,23 +2,33 @@
 
 class ProductController extends BaseController
 {
+    /**
+     * @var string => Nom de la page
+     */
     protected $name = 'product';
 
-    public function getProduct($i)
+    /**
+     * Renvoie le produit id
+     *
+     * @param $id
+     * @return Product
+     */
+    public function getProduct($id)
     {
-        return new Product($i);
+        return new Product($id);
     }
 
-    public function getID()
-    {
-        return $_GET['id'];
-    }
-
+    /**
+     * Renvoie un tableau au template
+     * chaque entrée est une variable dans le template
+     *
+     * @return array
+     */
     protected function getTemplateVars()
     {
         return array(
             'controller' => $this->name,
-            'product' => $this->getProduct($this->getID()),
+            'product' => $this->getProduct($_GET['id']),
         );
     }
 }

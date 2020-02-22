@@ -3,10 +3,18 @@
 
 class User extends BaseEntity
 {
+    /**
+     * @var int $id
+     * @var string $name
+     * @var string $passwd
+     */
     protected $id;
     protected $name;
     protected $passwd;
 
+    /**
+     * @var array => schéma d'un user
+     */
     public static $definition = array(
         'table' => 't_users',
         'primary' => 'id_user',
@@ -17,6 +25,13 @@ class User extends BaseEntity
         )
     );
 
+    /**
+     * Verifie le couple pseudo/password
+     *
+     * @param $name => pseudo de l'utilisateur
+     * @param $passwd => mot de passe de l'utilisateur
+     * @return bool connection réussie
+     */
     public static function connect($name, $passwd)
     {
         $db = DB::getInstance();
@@ -30,6 +45,11 @@ class User extends BaseEntity
         return false;
     }
 
+    /**
+     * Retourne l'id
+     *
+     * @return int
+     */
     public function getId()
     {
         return $this->id;

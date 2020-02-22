@@ -1,7 +1,17 @@
 <?php
+require_once('BaseEntity.php');
 
 class Product extends BaseEntity
 {
+    /**
+     * @var int $id
+     * @var string $name
+     * @var int $id_categ
+     * @var string $shorDesc
+     * @var string $longDesc
+     * @var int price
+     * @var int stock
+     */
     protected $id;
     protected $name;
     protected $id_categ;
@@ -10,6 +20,9 @@ class Product extends BaseEntity
     protected $price;
     protected $stock;
 
+    /**
+     * @var array => schéma d'un produit
+     */
     public static $definition = array(
         'table' => 't_products',
         'primary' => 'id_prod',
@@ -24,6 +37,12 @@ class Product extends BaseEntity
         )
     );
 
+    /**
+     * Crée des produits du resultat du parent
+     *
+     * @param string $needle => String de recherche
+     * @return array => tableau de Produit
+     */
     public static function search($needle)
     {
         $produits = array();
@@ -35,6 +54,12 @@ class Product extends BaseEntity
         return $produits;
     }
 
+    /**
+     * Retourne l'ensemble des objets d'une catégorie
+     *
+     * @param $id => id de la Categorie
+     * @return array => tableau de Produit
+     */
     public static function getCategorie($id)
     {
         $db = DB::getInstance();
@@ -50,6 +75,11 @@ class Product extends BaseEntity
         return $produits;
     }
 
+    /**
+     * Retourne tout les produits
+     *
+     * @return array => tableau de produit
+     */
     public static function getAllProducts()
     {
         $db = DB::getInstance();

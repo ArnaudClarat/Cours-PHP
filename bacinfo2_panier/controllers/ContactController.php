@@ -3,14 +3,24 @@
 
 class ContactController extends BaseController
 {
+    /**
+     * @var string => Nom de la page
+     */
     protected $name = 'contact';
-    protected $destinataire = '1407.clarat.student@ifosupwavre.be';
 
+    /**
+     * Tente d'envoyer un mail
+     *
+     * @return int
+     * 0 = Premier lancement du template
+     * 1 = Mail envoyé
+     * 2 = Erreur
+     */
     protected function sendMail()
     {
         if (!isset($_POST['submit']))
         {
-            return 0; // Premier lancement du contact.tpl
+            return 0;
         }
 
         $destinataire = '1407.clarat.student@ifosupwavre.be';
@@ -26,12 +36,18 @@ class ContactController extends BaseController
 
         if (mail($destinataire, $_POST['subject'], $email_message))
         {
-            return 2;
+            return 1;
         }
 
-        return 1;
+        return 2;
     }
 
+    /**
+     * Renvoie un tableau au template
+     * chaque entrée est une variable dans le template
+     *
+     * @return array
+     */
     protected function getTemplateVars()
     {
         return array(
