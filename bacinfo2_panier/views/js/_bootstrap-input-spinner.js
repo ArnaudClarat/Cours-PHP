@@ -39,9 +39,9 @@
             config[option] = options[option]
         }
 
-        const html = '<div class="input-group ' + config.groupClass + '" style="border: black solid 1px; border-radius: .25rem">' +
+        const html = '<div oninput="sum()" class="input-group ' + config.groupClass + '" style="border: black solid 1px; border-radius: .25rem">' +
 
-            '<div oninput="sum()" class="input-group-prepend">' +
+            '<div class="input-group-prepend">' +
             '<button style="min-width: ' + config.buttonsWidth + '" class="btn btn-decrement ' + config.buttonsClass + '" type="button">' + config.decrementButton + '</button>' +
             '</div>' +
             '<input type="text" inputmode="decimal" style="text-align: ' + config.textAlign + '" class="form-control"/>' +
