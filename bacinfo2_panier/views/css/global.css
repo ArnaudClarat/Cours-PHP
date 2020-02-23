@@ -1,10 +1,10 @@
-.card {
-    padding-top: 15px;
-}
-
 .img-prod {
     max-height: 350px;
     max-width: 350px;
+}
+
+.card-img-top {
+    margin-top: 15px;
 }
 
 #submit-connect {
