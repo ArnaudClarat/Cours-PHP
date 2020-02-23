@@ -36,7 +36,10 @@ class CartController extends BaseController
      */
     protected function getPanier()
     {
-        return new Cart($_SESSION['user']->getId());
+        if (isset($_SESSION['user'])) {
+            return new Cart($_SESSION['user']->getId());
+        }
+        return null;
     }
 
     /**
